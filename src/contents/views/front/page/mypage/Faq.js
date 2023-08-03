@@ -15,8 +15,8 @@ function Faq() {
           <div className='container'>
             <h2 className='com_pg_tit'>고객센터</h2>
             <section className='com_pg_tab'>
-              <Link to="/front/Mypage/Faq" className='tab active'>자주 묻는 질문</Link>
-              <Link to="/front/Mypage/Inquiry" className='tab'>1:1 문의</Link>
+              <Link to="/Mypage/Faq" className='tab active'>자주 묻는 질문</Link>
+              <Link to="/Mypage/Inquiry" className='tab'>1:1 문의</Link>
             </section>
             <div className='com_board_list__top'>
               <section className='com_cate'>

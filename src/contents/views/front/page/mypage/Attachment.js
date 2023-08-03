@@ -18,8 +18,8 @@ function Attachment() {
         <div className='container'>
           <h2 className='com_pg_tit'>첨부파일</h2>
           <section className='com_pg_tab'>
-            <Link to="/front/Mypage/MyResume" className='tab'>나의 이력서</Link>
-            <Link to="/front/Mypage/Attachment" className='tab active'>첨부파일</Link>
+            <Link to="/Mypage/MyResume" className='tab'>나의 이력서</Link>
+            <Link to="/Mypage/Attachment" className='tab active'>첨부파일</Link>
           </section>
           <div className='com_input_description'>
             <textarea name="" id="" cols="30" rows="10" placeholder='첨부파일 설명문구 들어갑니다.' className="input_description"></textarea>

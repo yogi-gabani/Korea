@@ -17,8 +17,8 @@ function MyResume() {
         <div className='container'>
           <h2 className='com_pg_tit'>첨부파일</h2>
           <section className='com_pg_tab'>
-            <Link to="/front/Mypage/MyResume" className='tab active'>나의 이력서</Link>
-            <Link to="/front/Mypage/Attachment" className='tab'>첨부파일</Link>
+            <Link to="/Mypage/MyResume" className='tab active'>나의 이력서</Link>
+            <Link to="/Mypage/Attachment" className='tab'>첨부파일</Link>
           </section>
           <div className='com_input_description'>
             <div className="com_progress_wrapper">
@@ -27,7 +27,7 @@ function MyResume() {
               <button className="com_btn line">나의 성향 알아보기</button>
             </div>
             <section className='btn_wrapper'>
-              <Link to="/front/Mypage/ResumeWriting" className="com_btn blue" >이력서 작성</Link>
+              <Link to="/Mypage/ResumeWriting" className="com_btn blue" >이력서 작성</Link>
             </section>
           </div>
           <table className='com_board_list'>

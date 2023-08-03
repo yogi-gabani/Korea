@@ -52,7 +52,7 @@ function Job() {
                 {[1,2,3,4,5].map((item, index) => (
                   <li className="item" key={index}>
                     <span className="status">모집중</span>
-                    <Link to="/front/Company/JobDetail"><div className="tit">디스플레이 장비 엔지니어 최고 대우로 모십니다.</div></Link>
+                    <Link to="/Company/JobDetail"><div className="tit">디스플레이 장비 엔지니어 최고 대우로 모십니다.</div></Link>
                     <div className="info">
                       <p className="info_s">
                         <span className="name">등록일</span><span className="bar"></span><span className="date">2023.01.01</span>

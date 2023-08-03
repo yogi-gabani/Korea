@@ -133,7 +133,7 @@ function Item() {
           </div>
         </div>
         <div className="btn_container center">
-          <Link to="/front/Mentoring/MentoringPay" className="com_btn blue m">결제하기</Link>
+          <Link to="/Mentoring/MentoringPay" className="com_btn blue m">결제하기</Link>
         </div>
       </Modal>
     </>

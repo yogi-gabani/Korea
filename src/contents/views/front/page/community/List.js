@@ -83,7 +83,7 @@ function List() {
             <button className="com_btn btn_category">카테고리 만들기</button>
           </div>
           <div className="community_list">
-            <Link to={'/front/Community/Detail'} className="com_community_card">
+            <Link to={'/Community/Detail'} className="com_community_card">
               <div className='img'>
                 <img alt=''/>
               </div>
@@ -106,7 +106,7 @@ function List() {
                 </div>
               </div>
             </Link>
-            <Link to={'/front/Community/Detail'} className="com_community_card">
+            <Link to={'/Community/Detail'} className="com_community_card">
               <div className='img'>
                 <img alt=''/>
               </div>

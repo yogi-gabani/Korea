@@ -14,8 +14,8 @@ function Inquiry() {
           <div className='container'>
             <h2 className='com_pg_tit'>고객센터</h2>
             <section className='com_pg_tab'>
-              <Link to="/front/Mypage/Faq" className='tab'>자주 묻는 질문</Link>
-              <Link to="/front/Mypage/Inquiry" className='tab active'>1:1 문의</Link>
+              <Link to="/Mypage/Faq" className='tab'>자주 묻는 질문</Link>
+              <Link to="/Mypage/Inquiry" className='tab active'>1:1 문의</Link>
             </section>
             <ul className='com_input_sec type_row'>
               <li className='field_box'>

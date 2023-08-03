@@ -39,7 +39,7 @@ function Chat() {
             </ul>
             <section className='com_btn_wrap center'>
               <button className='com_btn blue s '>질문 등록하기</button>
-              <Link to="/front/Mypage/QnaList" className='com_btn blue s line '>취소</Link>
+              <Link to="/Mypage/QnaList" className='com_btn blue s line '>취소</Link>
             </section>
           </div>
         </div>

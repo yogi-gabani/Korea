@@ -10,7 +10,7 @@ function NewPw() {
   return (
     <>
       <main className='com_member'>
-        <h1 className='logo'><Link to="/front/"><img src={Logo} alt="logo" /></Link></h1>
+        <h1 className='logo'><Link to="/"><img src={Logo} alt="logo" /></Link></h1>
         <div className='box'>
           <h2 className='pg_tit'>비밀번호 재설정</h2>
           <p className='pg_txt'>회원님의 비밀번호를 다시 설정해주세요.</p>

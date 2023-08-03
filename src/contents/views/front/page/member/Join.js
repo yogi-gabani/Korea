@@ -19,7 +19,7 @@ function Join() {
   return (
     <>
       <main className='p_join com_member'>
-        <h1 className='logo'><Link to="/front/"><img src={Logo} alt="logo" /></Link></h1>
+        <h1 className='logo'><Link to="/"><img src={Logo} alt="logo" /></Link></h1>
         <div className='box'>
           <section className='com_tab'>
             <button className='tab active'>일반회원</button>

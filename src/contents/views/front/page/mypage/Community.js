@@ -37,7 +37,7 @@ function MyCommunity() {
             
             {tabState === 0 && (
             <div className='wrap'>
-              <Link to="/front/Community/Detail" className="com_community_card">
+              <Link to="/Community/Detail" className="com_community_card">
                 <div className="info">
                   <div className="profile">
                     <p className="name">dief568</p>
@@ -58,7 +58,7 @@ function MyCommunity() {
                   </div>
                 </div>
               </Link>
-              <Link to="/front/Community/Detail" className="com_community_card">
+              <Link to="/Community/Detail" className="com_community_card">
                 <div className="info">
                   <div className="profile">
                     <p className="name">dief568</p>

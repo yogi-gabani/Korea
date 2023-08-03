@@ -94,7 +94,7 @@ import Privacy from '../views/front/page/etc/Privacy.js';
 
 function AppRouter() {
 
-  const PathMember = window.location.pathname.startsWith("/front/Member");
+  const PathMember = window.location.pathname.startsWith("/Member");
   const renderHeader = () => {
     if (PathMember) {
       return <></>;
@@ -114,91 +114,91 @@ function AppRouter() {
       <BrowserRouter>
         {renderHeader()}
         <Routes>
-          <Route path="/front" element={<Main />} />
-          <Route path="/front/JobList" element={<JobList />} />
+          <Route path="" element={<Main />} />
+          <Route path="/JobList" element={<JobList />} />
 
-          <Route path="/front/Member/Login" element={<Login />} />
-          <Route path="/front/Member/Approving" element={<Approving />} />
-          <Route path="/front/Member/NoApprove" element={<NoApprove />} />
-          <Route path="/front/Member/Approve" element={<Approve />} />
-          <Route path="/front/Member/Join" element={<Join />} />
-          <Route path="/front/Member/JoinOk" element={<JoinOk />} />
-          <Route path="/front/Member/SearchId" element={<SearchId />} />
-          <Route path="/front/Member/SearchIdOk" element={<SearchIdOk />} />
-          <Route path="/front/Member/SearchPw" element={<SearchPw />} />
-          <Route path="/front/Member/NewPw" element={<NewPw />} />
+          <Route path="/Member/Login" element={<Login />} />
+          <Route path="/Member/Approving" element={<Approving />} />
+          <Route path="/Member/NoApprove" element={<NoApprove />} />
+          <Route path="/Member/Approve" element={<Approve />} />
+          <Route path="/Member/Join" element={<Join />} />
+          <Route path="/Member/JoinOk" element={<JoinOk />} />
+          <Route path="/Member/SearchId" element={<SearchId />} />
+          <Route path="/Member/SearchIdOk" element={<SearchIdOk />} />
+          <Route path="/Member/SearchPw" element={<SearchPw />} />
+          <Route path="/Member/NewPw" element={<NewPw />} />
           
-          <Route path="/front/Community" element={<CommunityList />} />
-          <Route path="/front/Community/Write" element={<CommunityWrite />} />
-          <Route path="/front/Community/Detail" element={<CommunityDetail />} />
+          <Route path="/Community" element={<CommunityList />} />
+          <Route path="/Community/Write" element={<CommunityWrite />} />
+          <Route path="/Community/Detail" element={<CommunityDetail />} />
 
-          <Route path="/front/Insight" element={<InsightList />} />
-          <Route path="/front/Insight/Write" element={<InsightWrite />} />
-          <Route path="/front/Insight/Detail" element={<InsightDetail />} />
-          <Route path="/front/Insight/Pay" element={<Pay />} />
+          <Route path="/Insight" element={<InsightList />} />
+          <Route path="/Insight/Write" element={<InsightWrite />} />
+          <Route path="/Insight/Detail" element={<InsightDetail />} />
+          <Route path="/Insight/Pay" element={<Pay />} />
           
-          <Route path="/front/Magazine" element={<MagazineList />} />
-          <Route path="/front/Magazine/RecommendList" element={<MagazineRecommendList />} />
-          <Route path="/front/Magazine/Detail" element={<MagazineDetail />} />
+          <Route path="/Magazine" element={<MagazineList />} />
+          <Route path="/Magazine/RecommendList" element={<MagazineRecommendList />} />
+          <Route path="/Magazine/Detail" element={<MagazineDetail />} />
 
-          <Route path="/front/Seminar" element={<SeminarList />} />
-          <Route path="/front/Seminar/Detail" element={<SeminarDetail />} />
-          <Route path="/front/Seminar/Apply" element={<SeminarApply />} />
+          <Route path="/Seminar" element={<SeminarList />} />
+          <Route path="/Seminar/Detail" element={<SeminarDetail />} />
+          <Route path="/Seminar/Apply" element={<SeminarApply />} />
 
-          <Route path="/front/Match" element={<MatchList />} />
-          <Route path="/front/Mentoring" element={<MentoringList />} />
-          <Route path="/front/Mentoring/Intro" element={<MentoringIntro />} />
-          <Route path="/front/Mentoring/ListMember" element={<MentoringListMember />} />
-          <Route path="/front/Mentoring/MentoringProduct" element={<MentoringProduct />} />
-          <Route path="/front/Mentoring/MentoringPay" element={<MentoringPay />} />
+          <Route path="/Match" element={<MatchList />} />
+          <Route path="/Mentoring" element={<MentoringList />} />
+          <Route path="/Mentoring/Intro" element={<MentoringIntro />} />
+          <Route path="/Mentoring/ListMember" element={<MentoringListMember />} />
+          <Route path="/Mentoring/MentoringProduct" element={<MentoringProduct />} />
+          <Route path="/Mentoring/MentoringPay" element={<MentoringPay />} />
 
-          <Route path="/front/Mypage/Exchange" element={<Exchange />} />
-          <Route path="/front/Mypage/Account" element={<Account />} />
-          <Route path="/front/Mypage/ExchangeApplication" element={<ExchangeApplication />} />
-          <Route path="/front/Mypage/Push" element={<Push />} />
-          <Route path="/front/Mypage/Faq" element={<Faq />} />
-          <Route path="/front/Mypage/Inquiry" element={<Inquiry />} />
-          <Route path="/front/Mypage/ProductInsight" element={<ProductInsight />} />
-          <Route path="/front/Mypage/ProductMentoring" element={<ProductMentoring />} />
-          <Route path="/front/Mypage/Community" element={<MyCommunity />} />
-          <Route path="/front/Mypage/Seminar" element={<MySeminar />} />
-          <Route path="/front/Mypage/PayList" element={<PayList />} />
-          <Route path="/front/Mypage/PayInsight" element={<PayInsight />} />
-          <Route path="/front/Mypage/PayMentoring" element={<PayMentoring />} />
-          <Route path="/front/Mypage/Webcam" element={<Webcam />} />
-          <Route path="/front/Mypage/Chat" element={<Chat />} />
-          <Route path="/front/Mypage/QnaList" element={<QnaList />} />
-          <Route path="/front/Mypage/QnaWrite" element={<QnaWrite />} />
-          <Route path="/front/Mypage/QnaView" element={<QnaView />} />
-          <Route path="/front/Mypage/MatchRead" element={<MatchRead />} />
-          <Route path="/front/Mypage/MatchUnread" element={<MatchUnread />} />
-          <Route path="/front/Mypage/MatchInterview" element={<MatchInterview />} />
-          <Route path="/front/Mypage/MatchRecruit" element={<MatchRecruit />} />
-          <Route path="/front/Mypage/MatchWishCompany" element={<MatchWishCompany />} />
-          <Route path="/front/Mypage/Attachment" element={<Attachment />} />
-          <Route path="/front/Mypage/MyResume" element={<MyResume />} />
-          <Route path="/front/Mypage/ResumeWriting" element={<ResumeWriting />} />
+          <Route path="/Mypage/Exchange" element={<Exchange />} />
+          <Route path="/Mypage/Account" element={<Account />} />
+          <Route path="/Mypage/ExchangeApplication" element={<ExchangeApplication />} />
+          <Route path="/Mypage/Push" element={<Push />} />
+          <Route path="/Mypage/Faq" element={<Faq />} />
+          <Route path="/Mypage/Inquiry" element={<Inquiry />} />
+          <Route path="/Mypage/ProductInsight" element={<ProductInsight />} />
+          <Route path="/Mypage/ProductMentoring" element={<ProductMentoring />} />
+          <Route path="/Mypage/Community" element={<MyCommunity />} />
+          <Route path="/Mypage/Seminar" element={<MySeminar />} />
+          <Route path="/Mypage/PayList" element={<PayList />} />
+          <Route path="/Mypage/PayInsight" element={<PayInsight />} />
+          <Route path="/Mypage/PayMentoring" element={<PayMentoring />} />
+          <Route path="/Mypage/Webcam" element={<Webcam />} />
+          <Route path="/Mypage/Chat" element={<Chat />} />
+          <Route path="/Mypage/QnaList" element={<QnaList />} />
+          <Route path="/Mypage/QnaWrite" element={<QnaWrite />} />
+          <Route path="/Mypage/QnaView" element={<QnaView />} />
+          <Route path="/Mypage/MatchRead" element={<MatchRead />} />
+          <Route path="/Mypage/MatchUnread" element={<MatchUnread />} />
+          <Route path="/Mypage/MatchInterview" element={<MatchInterview />} />
+          <Route path="/Mypage/MatchRecruit" element={<MatchRecruit />} />
+          <Route path="/Mypage/MatchWishCompany" element={<MatchWishCompany />} />
+          <Route path="/Mypage/Attachment" element={<Attachment />} />
+          <Route path="/Mypage/MyResume" element={<MyResume />} />
+          <Route path="/Mypage/ResumeWriting" element={<ResumeWriting />} />
 
-          <Route path="/front/Mypage/MyFit" element={<MyFit />} />
-          <Route path="/front/Mypage/JobSearchApply" element={<JobSearchApply />} />
-          <Route path="/front/Mypage/ExchangeAccount" element={<ExchangeAccount />} />
-          <Route path="/front/Mypage/PointCharge" element={<PointCharge />} />
-          <Route path="/front/Mypage/Profile" element={<Profile />} />
-          <Route path="/front/Mypage/Leave" element={<Leave />} />
+          <Route path="/Mypage/MyFit" element={<MyFit />} />
+          <Route path="/Mypage/JobSearchApply" element={<JobSearchApply />} />
+          <Route path="/Mypage/ExchangeAccount" element={<ExchangeAccount />} />
+          <Route path="/Mypage/PointCharge" element={<PointCharge />} />
+          <Route path="/Mypage/Profile" element={<Profile />} />
+          <Route path="/Mypage/Leave" element={<Leave />} />
 
-          <Route path="/front/Company/Info" element={<CompanyInfo />} />
-          <Route path="/front/Company/Job" element={<CompanyJob />} />
-          <Route path="/front/Company/JobDetail" element={<CompanyJobDetail />} />
-          <Route path="/front/Company/Recruit" element={<CompanyRecruit />} />
-          <Route path="/front/Company/Vision" element={<CompanyVision />} />
-          <Route path="/front/Company/Cs" element={<CompanyCs />} />
-          <Route path="/front/Company/Notice" element={<CompanyNotice />} />
-          <Route path="/front/Company/RecruitDetail" element={<CompanyRecruitDetail />} />
-          <Route path="/front/Company/Resume" element={<CompanyResume />} />
-          <Route path="/front/Company/RecruitStatus" element={<CompanyRecruitStatus />} />
+          <Route path="/Company/Info" element={<CompanyInfo />} />
+          <Route path="/Company/Job" element={<CompanyJob />} />
+          <Route path="/Company/JobDetail" element={<CompanyJobDetail />} />
+          <Route path="/Company/Recruit" element={<CompanyRecruit />} />
+          <Route path="/Company/Vision" element={<CompanyVision />} />
+          <Route path="/Company/Cs" element={<CompanyCs />} />
+          <Route path="/Company/Notice" element={<CompanyNotice />} />
+          <Route path="/Company/RecruitDetail" element={<CompanyRecruitDetail />} />
+          <Route path="/Company/Resume" element={<CompanyResume />} />
+          <Route path="/Company/RecruitStatus" element={<CompanyRecruitStatus />} />
 
-          <Route path="/front/etc/Terms" element={<Terms/>}/>
-          <Route path="/front/etc/Privacy" element={<Privacy/>}/>
+          <Route path="/etc/Terms" element={<Terms/>}/>
+          <Route path="/etc/Privacy" element={<Privacy/>}/>
           
         </Routes>
         {renderFooter()}

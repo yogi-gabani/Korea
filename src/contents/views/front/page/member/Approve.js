@@ -9,7 +9,7 @@ function Approve() {
   return (
     <>
       <main className='com_member'>
-        <h1 className='logo'><Link to="/front/"><img src={Logo} alt="logo" /></Link></h1>
+        <h1 className='logo'><Link to="/"><img src={Logo} alt="logo" /></Link></h1>
         <div className='box com_ok'>
           <p className='icon'><img src={Icon} alt=''/></p>
           <h2 className='tit'>축하합니다!<br/>기업 승인이 완료됐습니다!</h2>
@@ -26,7 +26,7 @@ function Approve() {
               <li className='item'>엔지니어가 원하는 기업이 무엇인지 알 수 있어요.</li>
             </ul>
           </section>
-          <section className='com_btn_wrap'><Link to="/front/Member/NoApprove" className='com_btn blue m'>확인</Link></section>
+          <section className='com_btn_wrap'><Link to="/Member/NoApprove" className='com_btn blue m'>확인</Link></section>
         </div>
       </main>
     </>

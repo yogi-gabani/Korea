@@ -78,7 +78,7 @@ function Profile() {
               <button className="com_btn blue s">수정 완료</button>
               <button className="com_btn line blue s">취소</button>
             </div>
-            <Link to="/front/Mypage/Leave" className="btn_leave">회원탈퇴</Link>
+            <Link to="/Mypage/Leave" className="btn_leave">회원탈퇴</Link>
           </div>
         </div>
       </div>

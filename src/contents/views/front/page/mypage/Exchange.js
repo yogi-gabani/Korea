@@ -90,7 +90,7 @@ function Exchange() {
           환전계좌를 입력 하시겠습니까?
         </div>
         <div className="btn_container">
-          <Link to="/front/Mypage/Account" className="com_btn blue s">작성하기</Link>
+          <Link to="/Mypage/Account" className="com_btn blue s">작성하기</Link>
           <button className="com_btn blue line s" onClick={() => handleCloseModal()}>취소</button>
         </div>
       </Modal>

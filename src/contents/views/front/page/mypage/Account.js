@@ -36,7 +36,7 @@ function Account() {
               </li>
             </ul>
             <section className='com_btn_wrap center'>
-              <Link to="/front/Mypage/ExchangeApplication" className='com_btn blue s'>수정완료</Link>
+              <Link to="/Mypage/ExchangeApplication" className='com_btn blue s'>수정완료</Link>
               <button className='com_btn blue line s'>취소</button>
             </section>
           </div>

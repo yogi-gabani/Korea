@@ -16,35 +16,35 @@ function Header() {
   const gnbData = [
     {
       title:'AI매칭',
-      link:'/front/Match'
+      link:'/Match'
     },
     {
       title:'멘토링',
-      link:'/front/Mentoring'
+      link:'/Mentoring'
     },
     {
       title:'인사이트',
-      link:'/front/Insight'
+      link:'/Insight'
     },
     {
       title:'커뮤니티',
-      link:'/front/Community'
+      link:'/Community'
     },
     {
       title:'매거진',
-      link:'/front/Magazine'
+      link:'/Magazine'
     },
     {
       title:'세미나',
-      link:'/front/Seminar'
+      link:'/Seminar'
     },
     // {
     //   title:'1:1매니징 서비스',
-    //   link:'/front/Managing'
+    //   link:'/Managing'
     // },
     {
       title:'마이페이지',
-      link:'/front/Mypage/Exchange'
+      link:'/Mypage/Exchange'
     },
   ]
   const renderGnb = useCallback(() => {
@@ -69,7 +69,7 @@ function Header() {
   return (
     <header className={'head' + (isActive ? ' active' : '') }>
       <div className="com_center_wrap">
-        <Link to="/front" className="logo">
+        <Link to="/" className="logo">
           <img src={Logo} alt="logo" />
         </Link>
         <div className="gnb_container">
@@ -78,10 +78,10 @@ function Header() {
           </ul>
         </div>
         <section className="gnb_link">
-          <Link to="/front/Company/Info" className="link btn_company_home">기업회원 홈</Link>
-          {/* <Link to="/front/Member/Login" className="link btn_login">로그인하기</Link> */}
-          <Link to="/front/Mypage/Push" className="link btn_push"><img src={IconAlarm} alt="alarm" /><i className="push">2</i></Link>
-          <Link to="/front/Member/Login" className="link btn_my"><img src={IconMy} alt="로그아웃" /></Link>
+          <Link to="/Company/Info" className="link btn_company_home">기업회원 홈</Link>
+          {/* <Link to="/Member/Login" className="link btn_login">로그인하기</Link> */}
+          <Link to="/Mypage/Push" className="link btn_push"><img src={IconAlarm} alt="alarm" /><i className="push">2</i></Link>
+          <Link to="/Member/Login" className="link btn_my"><img src={IconMy} alt="로그아웃" /></Link>
         </section>
         <button className="btn_bar BtnBar" onClick={() => {toggleMenu()}}></button>
       </div>

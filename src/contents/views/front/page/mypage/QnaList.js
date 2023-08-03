@@ -27,14 +27,14 @@ function Chat() {
               <tbody>
                 <tr>
                   <td className='tit_field'>
-                    <Link to="/front/Mypage/QnaView" className="link_view has_re"><p className='txt'>차체설계의 대한 생각을 평가 받고 싶습니다.차체설계의 대한 생각을 평가 받고 싶습니다.차체설계의 대한 생각을 평가 받고 싶습니다.차체설계의 대한 생각을 평가 받고 싶습니다.차체설계의 대한 생각을 평가 받고 싶습니다.</p><span className='re_num'>15</span></Link>
+                    <Link to="/Mypage/QnaView" className="link_view has_re"><p className='txt'>차체설계의 대한 생각을 평가 받고 싶습니다.차체설계의 대한 생각을 평가 받고 싶습니다.차체설계의 대한 생각을 평가 받고 싶습니다.차체설계의 대한 생각을 평가 받고 싶습니다.차체설계의 대한 생각을 평가 받고 싶습니다.</p><span className='re_num'>15</span></Link>
                   </td>
                   <td className='id_field'>Menti</td>
                   <td className='date_field'>2022.11.22</td>
                 </tr>
                 <tr>
                   <td className='tit_field'>
-                    <Link to="/front/Mypage/QnaView" className="link_view has_re"><p className='txt'>차체설계의 대한 생각을 평가 받고 싶습니다.</p><span className='re_num'>1</span></Link>
+                    <Link to="/Mypage/QnaView" className="link_view has_re"><p className='txt'>차체설계의 대한 생각을 평가 받고 싶습니다.</p><span className='re_num'>1</span></Link>
                   </td>
                   <td className='id_field'>Menti</td>
                   <td className='date_field'>2022.11.22</td>
@@ -42,7 +42,7 @@ function Chat() {
               </tbody>
             </table>
             <section className='com_board_list__bottom'>
-              <Link to="/front/Mypage/QnaWrite" className='com_btn blue xs oval'>질문 작성하기</Link>
+              <Link to="/Mypage/QnaWrite" className='com_btn blue xs oval'>질문 작성하기</Link>
             </section>
             <Paging />
           </div>

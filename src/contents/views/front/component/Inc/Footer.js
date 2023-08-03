@@ -6,9 +6,9 @@ function Footer() {
     <footer className="footer">
       <div className="com_center_wrap">
         <section className="link">
-          <Link to="/front/Etc/Privacy" className="btn com_txt_point">개인정보 처리방침</Link>
+          <Link to="/Etc/Privacy" className="btn com_txt_point">개인정보 처리방침</Link>
           <span className="bar"></span>
-          <Link to="/front/Etc/Terms" className="btn">서비스 이용약관</Link>
+          <Link to="/Etc/Terms" className="btn">서비스 이용약관</Link>
         </section>
         <section className="info">
           <address className="address">

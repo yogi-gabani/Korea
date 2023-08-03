@@ -37,7 +37,7 @@ function Detail() {
             <p className="message">결제 후 시청하실 수 있습니다.</p>
           </div>
           <div className="button_wrap">
-            <Link to={'/front/Insight/Pay'} className="com_btn blue payment">결제하기</Link>
+            <Link to={'/Insight/Pay'} className="com_btn blue payment">결제하기</Link>
           </div>
           <div className="description_wrap">
             <p>어떤 이야기를 하나요?</p>

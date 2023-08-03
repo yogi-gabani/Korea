@@ -39,8 +39,8 @@ function MentorList() {
             <div className="pg_tit_wrap">
               <h2 className="com_pg_tit">멘토링</h2>
               <div className="com_btn_wrap">
-                <Link to="/front/Mypage/ProductMentoring" className="com_btn m black icon_arrow btn_all_list">내 상품 관리</Link>
-                <Link to="/front/Mentoring/MentoringProduct" className="com_btn m black icon_arrow btn_all_list">멘토 상품 등록</Link>
+                <Link to="/Mypage/ProductMentoring" className="com_btn m black icon_arrow btn_all_list">내 상품 관리</Link>
+                <Link to="/Mentoring/MentoringProduct" className="com_btn m black icon_arrow btn_all_list">멘토 상품 등록</Link>
               </div>
             </div>
           </div>

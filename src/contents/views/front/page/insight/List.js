@@ -42,7 +42,7 @@ function List() {
               <div className="com_btn_wrap">
                 <button className='com_btn line black m'>상품관리</button>
                 <button className='com_btn line black m'>결제 콘텐츠 목록 보기</button>
-                <Link to={'/front/Insight/Write'} className='com_btn bg black m btn_register'>인사이트 등록</Link>
+                <Link to={'/Insight/Write'} className='com_btn bg black m btn_register'>인사이트 등록</Link>
               </div>
             </div>
             <div className="com_tab_wrap">

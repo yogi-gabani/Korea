@@ -67,14 +67,14 @@ function RecruitDetail() {
                   </div>
                   <div className="com_btn_wrap">
                     <button className="com_btn line xs btn_like">찜하기</button>
-                    <Link to="/front/Company/Resume" className="com_btn bg blue xs">이력서 보기</Link>
+                    <Link to="/Company/Resume" className="com_btn bg blue xs">이력서 보기</Link>
                   </div>
                 </li>
                 ))}
               </ul>
             </div>
             <div className="com_btn_wrap center">
-              <Link to="/front/Company/Recruit" className="com_btn blue s">추천 인재 목록으로</Link>
+              <Link to="/Company/Recruit" className="com_btn blue s">추천 인재 목록으로</Link>
             </div>
           </div>
         </div>

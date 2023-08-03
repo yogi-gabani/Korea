@@ -26,7 +26,7 @@ function Detail() {
             <p>①디자인 전시, ②국제 컨퍼런스, ③디자인대상 및 우수디자인 시상식, ④B2B 디자인 비즈니스 매칭 행사, ⑤디자이너 잡 페어, ⑥디자인 진흥사업 성과 공유회 등 다양한 행사가 진행되며, 온라인(designkorea.kidp.or.kr)에서도 실시간으로 관람이 가능하다.</p>
           </div>
           <div className="button_wrap">
-            <Link to={'/front/Magazine'} className="com_btn blue payment">목록으로</Link>
+            <Link to={'/Magazine'} className="com_btn blue payment">목록으로</Link>
           </div>
         </section>
         <section className="sec_other">

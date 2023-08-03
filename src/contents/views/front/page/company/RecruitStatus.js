@@ -67,7 +67,7 @@ function RecruitStatus() {
                 <tr key={index}>
                   <td className='info_field'><span className='th_m'>지원자 :</span>홍길동</td>
                   <td className='info_field info_apply_date'><span className='th_m'>지원일 :</span>23.01.11</td>
-                  <td className='info_field info_btn'><Link to="/front/Company/Resume" className="com_btn oval line s">이력서 보기</Link></td>
+                  <td className='info_field info_btn'><Link to="/Company/Resume" className="com_btn oval line s">이력서 보기</Link></td>
                   <td className='info_field info_btn'>
                     <select className='select'>
                       <option value="지원중">지원중</option>

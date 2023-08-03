@@ -36,8 +36,8 @@ function ProductMentoring() {
           <div className='container'>
             <h2 className='com_pg_tit'>상품 관리</h2>
             <section className='com_pg_tab'>
-              <Link to="/front/Mypage/ProductInsight" className='tab'>인사이트 상품</Link>
-              <Link to="/front/Mypage/ProductMentoring" className='tab active'>멘토링 상품</Link>
+              <Link to="/Mypage/ProductInsight" className='tab'>인사이트 상품</Link>
+              <Link to="/Mypage/ProductMentoring" className='tab active'>멘토링 상품</Link>
             </section>
             <section className='com_board_list__top'>
               <article className='com_cate'>

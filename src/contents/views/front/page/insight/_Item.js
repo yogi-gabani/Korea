@@ -5,7 +5,7 @@ import { Link } from "react-router-dom";
 
 function Item() {
   return (
-    <Link to={'/front/Insight/Detail'} className="com_card_item">
+    <Link to={'/Insight/Detail'} className="com_card_item">
       <div className="thumb">
         <span className="price">2,000P</span>
         <img src={imgMentor03} className="thumb_img" alt="mentoring1" />

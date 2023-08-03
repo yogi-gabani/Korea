@@ -47,7 +47,7 @@ function Recruit() {
               {[1,2,3,4,5,6,7].map((item, index) => (
                 <li className="item" key={index}>
                   <span className="status">모집중</span>
-                  <Link to="/front/Company/RecruitDetail"><div className="tit">디스플레이 장비 엔지니어 최고 대우로 모십니다.</div></Link>
+                  <Link to="/Company/RecruitDetail"><div className="tit">디스플레이 장비 엔지니어 최고 대우로 모십니다.</div></Link>
                   <p className="region">경기<span className="dot"/>일산</p>
                   <div className="info">
                     <p className="info_s">
@@ -104,7 +104,7 @@ function Recruit() {
                   </div>
                   <div className="com_btn_wrap">
                     <button className="com_btn line xs btn_like">해제하기</button>
-                    <Link to="/front/Company/Resume" className="com_btn bg blue xs">이력서 보기</Link>
+                    <Link to="/Company/Resume" className="com_btn bg blue xs">이력서 보기</Link>
                   </div>
                 </li>
                 ))}
@@ -142,7 +142,7 @@ function Recruit() {
                     <td className='info_field info_status'>면접 거절</td>
                     <td className='info_field info_due_date'><span className="th_m">제안 마감 기한</span>2023.01.01</td>
                     <td className='info_field info_due_date'><span className="th_m">면접 확정일자</span>2023.01.01</td>
-                    <td className='info_field info_btn'><Link to="/front/Company/Resume" className="com_btn oval line s">이력서 보기</Link></td>
+                    <td className='info_field info_btn'><Link to="/Company/Resume" className="com_btn oval line s">이력서 보기</Link></td>
                   </tr>
                   ))}
                 </tbody>
@@ -219,19 +219,19 @@ function Recruit() {
                   </div>
                   <div className="list_box input_box">
                     <div className="status_wrap">
-                      <Link to="/front/Company/RecruitStatus" className="status_link active">
+                      <Link to="/Company/RecruitStatus" className="status_link active">
                         <span>지원중 5명</span>
                       </Link>
-                      <Link to="/front/Company/RecruitStatus" className="status_link active">
+                      <Link to="/Company/RecruitStatus" className="status_link active">
                         <span>서류통과 5명</span>
                       </Link>
-                      <Link to="/front/Company/RecruitStatus" className="status_link active">
+                      <Link to="/Company/RecruitStatus" className="status_link active">
                         <span>서류거절 5명</span>
                       </Link>
-                      <Link to="/front/Company/RecruitStatus" className="status_link active">
+                      <Link to="/Company/RecruitStatus" className="status_link active">
                         <span>합격 5명</span>
                       </Link>
-                      <Link to="/front/Company/RecruitStatus" className="status_link active">
+                      <Link to="/Company/RecruitStatus" className="status_link active">
                         <span>불합격 5명</span>
                       </Link>
                     </div>

@@ -81,7 +81,7 @@ function MentoringPay() {
           </ul>
         </section>
         <div className="com_btn_wrap center">
-          <Link to="/front/Mentoring" className="com_btn line m">멘토 목록으로</Link>
+          <Link to="/Mentoring" className="com_btn line m">멘토 목록으로</Link>
           <button className="com_btn blue m" onClick={() => setModalOpen(true)}>결제하기</button>
         </div>
       </div>

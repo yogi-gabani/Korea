@@ -136,7 +136,7 @@ function Resume() {
               </ul>
             </div>
             <div className="com_btn_wrap center">
-              <Link to="/front/Company/Recruit" className="com_btn line blue s">공고 목록으로</Link>
+              <Link to="/Company/Recruit" className="com_btn line blue s">공고 목록으로</Link>
               <button className="com_btn blue s" onClick={() => {setModalSuggestionOpen(true)}}>면접 제안</button>
             </div>
           </div>

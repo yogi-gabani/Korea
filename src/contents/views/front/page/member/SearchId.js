@@ -9,7 +9,7 @@ function SearchId() {
   return (
     <>
       <main className='com_member'>
-        <h1 className='logo'><Link to="/front/"><img src={Logo} alt="logo" /></Link></h1>
+        <h1 className='logo'><Link to="/"><img src={Logo} alt="logo" /></Link></h1>
         <div className='box'>
           <h2 className='pg_tit'>아이디 찾기</h2>
           <p className='pg_txt'>회원가입 시 등록했던 정보를 입력하세요.</p>
@@ -21,8 +21,8 @@ function SearchId() {
             </li>
           </ul>
           <section className='com_btn_wrap'>
-            <Link to="/front/Member/Login" className='com_btn gray l'>취소</Link>
-            <Link to="/front/Member/SearchIdOk" className='com_btn blue l'>확인</Link>
+            <Link to="/Member/Login" className='com_btn gray l'>취소</Link>
+            <Link to="/Member/SearchIdOk" className='com_btn blue l'>확인</Link>
           </section>
         </div>
       </main>

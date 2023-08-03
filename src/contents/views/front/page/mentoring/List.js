@@ -39,7 +39,7 @@ function MentorList() {
             <div className="pg_tit_wrap">
               <h2 className="com_pg_tit">멘토링</h2>
               <div className="com_btn_wrap">
-                <Link to="/front/Mentoring/Intro" className="com_btn m black icon_arrow btn_all_list">멘토링이란?</Link>
+                <Link to="/Mentoring/Intro" className="com_btn m black icon_arrow btn_all_list">멘토링이란?</Link>
               </div>
             </div>
             <div className="com_tab_wrap">

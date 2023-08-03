@@ -58,7 +58,7 @@ function Index() {
             <div className="custom_pagination visual"></div>
           </div>
           <div className="banner">
-            <Link to="/front/Match"><img src={imgVisualBanner} alt="내 까다로운 조건과 성격에 맞는 회사는?" /></Link>
+            <Link to="/Match"><img src={imgVisualBanner} alt="내 까다로운 조건과 성격에 맞는 회사는?" /></Link>
           </div>
         </div>
       </section>
@@ -79,7 +79,7 @@ function Index() {
               <li className="tag_item icon_line_blue">대우가 좋은</li>
               <li className="tag_item icon_line_blue">대우가 좋은</li>
             </ul>
-            <Link to="/front/Match" className="com_btn l black oval icon_arrow btn_more_bottom">더보기</Link>
+            <Link to="/Match" className="com_btn l black oval icon_arrow btn_more_bottom">더보기</Link>
           </div>
           <div className="swiper_wrap">
             <Swiper
@@ -121,7 +121,7 @@ function Index() {
                       <li className="tag_item">#엔지니어</li>
                     </ul>
                   </div>
-                  <Link to="/front/Match" className="btn_more"></Link>
+                  <Link to="/Match" className="btn_more"></Link>
                 </div>
               </SwiperSlide>
               <SwiperSlide>
@@ -140,7 +140,7 @@ function Index() {
                       <li className="tag_item">#엔지니어</li>
                     </ul>
                   </div>
-                  <Link to="/front/Match" className="btn_more"></Link>
+                  <Link to="/Match" className="btn_more"></Link>
                 </div>
               </SwiperSlide>
               <SwiperSlide>
@@ -159,7 +159,7 @@ function Index() {
                       <li className="tag_item">#엔지니어</li>
                     </ul>
                   </div>
-                  <Link to="/front/Match" className="btn_more"></Link>
+                  <Link to="/Match" className="btn_more"></Link>
                 </div>
               </SwiperSlide>
             </Swiper>
@@ -172,7 +172,7 @@ function Index() {
         <div className="com_center_wrap">
           <div className="tit_wrap center">
             <h2 className="tit">성장하기 위한 준비! <span className="ballon">전문가 멘토</span> 와 함께 하세요.</h2>
-            <Link to="/front/Mentoring" className="com_btn l black oval icon_arrow">멘토링 신청하기</Link>
+            <Link to="/Mentoring" className="com_btn l black oval icon_arrow">멘토링 신청하기</Link>
           </div>
           <div className="swiper_wrap">
             <Swiper
@@ -236,7 +236,7 @@ function Index() {
         <div className="com_center_wrap">
           <div className="tit_wrap center">
             <h2 className="tit">경력있는 엔지니어의 <span className="ballon">인사이트</span> 를 공유하세요</h2>
-            <Link to="/front/Insight" className="com_btn l black oval icon_arrow">인사이트 공유 신청하기</Link>
+            <Link to="/Insight" className="com_btn l black oval icon_arrow">인사이트 공유 신청하기</Link>
           </div>
           <div className="swiper_wrap">
             <Swiper
@@ -307,7 +307,7 @@ function Index() {
               <strong>다양한 엔지니어 분야의 정보</strong>를 <br />
               확인할 수 있습니다.
             </p>
-            <Link to="/front/Magazine" className="com_btn l black oval icon_arrow btn_more_bottom">매거진 더보기</Link>
+            <Link to="/Magazine" className="com_btn l black oval icon_arrow btn_more_bottom">매거진 더보기</Link>
           </div>
           <div className="swiper_wrap">
             <Swiper
@@ -363,7 +363,7 @@ function Index() {
                   <p className="desc">
                     산업통상자원부(이하 산업부)가 주최하고 한국디자인진흥원
                   </p>
-                  <Link to="/front/Magazine" className="btn_more"></Link>
+                  <Link to="/Magazine" className="btn_more"></Link>
                 </div>
               </SwiperSlide>
               <SwiperSlide>
@@ -373,7 +373,7 @@ function Index() {
                   <p className="desc">
                   한화솔루션 케미칼 부문을 선택한 이유, 나를 표현하는 차별화된 면접전략 등의 입사성공 노하우와 입사성공 후 직,간접적으로 겪어보는 한화솔루션 케미칼 부문 이야기와 후배들을 위한 응원 한마디도 놓치지 마세요!
                   </p>
-                  <Link to="/front/Magazine" className="btn_more"></Link>
+                  <Link to="/Magazine" className="btn_more"></Link>
                 </div>
               </SwiperSlide>
               <SwiperSlide>
@@ -386,7 +386,7 @@ function Index() {
                   <p className="desc">
                     산업통상자원부(이하 산업부)가 주최하고 한국디자인진흥원
                   </p>
-                  <Link to="/front/Magazine" className="btn_more"></Link>
+                  <Link to="/Magazine" className="btn_more"></Link>
                 </div>
               </SwiperSlide>
             </Swiper>
@@ -399,7 +399,7 @@ function Index() {
         <div className="com_center_wrap">
           <div className="tit_wrap center">
             <h2 className="tit">권위 있는 엔지니어들의 <br/><span className="ballon">오프라인 강연</span> 지금 참여해보세요!</h2>
-            <Link to="/front/Seminar" className="com_btn l black oval icon_arrow">세미나 더보기</Link>
+            <Link to="/Seminar" className="com_btn l black oval icon_arrow">세미나 더보기</Link>
           </div>
           <div className="swiper_wrap">
             <Swiper
@@ -462,7 +462,7 @@ function Index() {
         <div className="com_center_wrap">
           <div className="tit_wrap center">
             <h2 className="tit">성장을 위한 가장 확실한 방법은 <br />뛰어난 동료들과<span className="ballon">소통</span>  하는 것입니다.</h2>
-            <Link to="/front/Community" className="com_btn l black oval icon_arrow">커뮤니티 더보기</Link>
+            <Link to="/Community" className="com_btn l black oval icon_arrow">커뮤니티 더보기</Link>
           </div>
           <div className="swiper_wrap">
             <Swiper

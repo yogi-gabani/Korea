@@ -15,8 +15,8 @@ function PayInsight() {
           <div className='container'>
             <h2 className='com_pg_tit'>결제 콘텐츠 목록</h2>
             <section className='com_pg_tab'>
-              <Link to="/front/Mypage/PayInsight" className='tab active'>결제 인사이트 목록</Link>
-              <Link to="/front/Mypage/PayMentoring" className='tab'>결제 멘토링 목록</Link>
+              <Link to="/Mypage/PayInsight" className='tab active'>결제 인사이트 목록</Link>
+              <Link to="/Mypage/PayMentoring" className='tab'>결제 멘토링 목록</Link>
             </section>
             <section className='com_board_list__top'>
              <article className='btn_wrap'>

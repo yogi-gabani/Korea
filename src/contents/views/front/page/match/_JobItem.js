@@ -18,7 +18,7 @@ function JopItem() {
           <li className="tag_item">#엔지니어</li>
         </ul>
       </div>
-      <Link to="/front/Match" className="btn_more"></Link>
+      <Link to="/Match" className="btn_more"></Link>
       <button className="btn_like" />
       {/* 아이콘 active 시 active class 추가 */}
       <div className="graph">

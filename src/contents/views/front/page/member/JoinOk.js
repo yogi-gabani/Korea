@@ -11,7 +11,7 @@ function JoinOk() {
   return (
     <>
       <main className='com_member'>
-        <h1 className='logo'><Link to="/front/"><img src={Logo} alt="logo" /></Link></h1>
+        <h1 className='logo'><Link to="/"><img src={Logo} alt="logo" /></Link></h1>
         <div className='box com_ok'>
           <p className='icon'><img src={Icon} alt=''/></p>
           {/*일반회원 start*/}
@@ -29,7 +29,7 @@ function JoinOk() {
             </div>
           </section>
           {/*기업회원 end*/}
-          <section className='com_btn_wrap'><Link to="/front" className='com_btn blue m'>메인 홈으로</Link></section>
+          <section className='com_btn_wrap'><Link to="/" className='com_btn blue m'>메인 홈으로</Link></section>
         </div>
       </main>
       

@@ -17,31 +17,31 @@ function Lnb(props) {
   const lnbData = [
     {
       title:'기업정보',
-      link:'/front/Company/Info'
+      link:'/Company/Info'
     },
     {
       title:'공고관리',
-      link:'/front/Company/Job'
+      link:'/Company/Job'
     },
     {
       title:'채용관리',
-      link:'/front/Company/Recruit'
+      link:'/Company/Recruit'
     },
     {
       title:'기업성향',
-      link:'/front/Company/Vision'
+      link:'/Company/Vision'
     },
     {
       title:'알림내역',
-      link:'/front/Company/Notice'
+      link:'/Company/Notice'
     },
     {
       title:'고객센터',
-      link:'/front/Company/Cs'
+      link:'/Company/Cs'
     },
     {
       title:'헤드헌팅',
-      link:'/front/Company/Hh'
+      link:'/Company/Hh'
     },
   ]
   const renderLnb = useCallback(() => {
@@ -68,13 +68,13 @@ function Lnb(props) {
         </section>
         <section className={isActive ? 'lnb active' :'lnb'}>
           {renderLnb()}
-          {/* <Link to="/front/Company/Info" className='menu active'>기업정보</Link>
-          <Link to="/front/Company/Job" className='menu'>공고관리</Link>
-          <Link to="/front/Company/Recruit" className='menu'>채용관리</Link>
-          <Link to="/front/Company/Vision" className='menu'>기업성향</Link>
-          <Link to="/front/Company/Notice" className='menu'>알림내역</Link>
-          <Link to="/front/Company/Cs" className='menu'>고객센터</Link>
-          <Link to="/front/Company/Hh" className='menu'>헤드헌팅</Link> */}
+          {/* <Link to="/Company/Info" className='menu active'>기업정보</Link>
+          <Link to="/Company/Job" className='menu'>공고관리</Link>
+          <Link to="/Company/Recruit" className='menu'>채용관리</Link>
+          <Link to="/Company/Vision" className='menu'>기업성향</Link>
+          <Link to="/Company/Notice" className='menu'>알림내역</Link>
+          <Link to="/Company/Cs" className='menu'>고객센터</Link>
+          <Link to="/Company/Hh" className='menu'>헤드헌팅</Link> */}
         </section>
         <div className="notice_txt">
           기업성향 설문을 진행하시면
