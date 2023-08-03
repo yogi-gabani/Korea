@@ -1,0 +1,270 @@
+//^form style
+
+//! 정보입력 폼 info input form
+.com_input_sec{
+  margin-top:2px;
+  font-size:14px;
+  .com_pg_tab + &{
+    margin-top:30px;
+  }
+  @include media-max($m){
+    font-size:13px;
+  }
+  .icon_must{
+    color:$point;
+    margin-left:4px;
+  }
+  .tit_field{
+    font-size: 14px;
+    font-weight: 600;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: 1.43;
+    letter-spacing: normal;
+    text-align: left;
+    margin-block:25px 8.5px;
+    color:#333;
+  }
+  .input_wrap{
+    margin-bottom:10px;
+    @include flex(y);
+    .com_btn{
+      min-height: 45px;
+      min-width: 110px;
+    }
+  }
+  .input_field{
+    margin-bottom:14.5px;
+    color:#666;
+    input[type=text],
+    input[type=password]{
+      width:100%;
+    }
+    .com_btn{
+      &.s{
+        height:45px;
+        min-width: 80px;
+      }
+    }
+    > .tip_txt{
+      margin-top:14.5px;
+    }
+  }
+  .bottom_btn_field{
+    margin-bottom:14.5px;
+    @include flex(between);
+    .com_btn{
+      width:100%;
+      font-size:14px;
+      &+.com_btn{
+        margin-left:10px;
+        min-width: auto;
+      }
+    }
+  }
+  &__tit{
+    font-size: 18px;
+    font-weight: bold;
+    color: $point;  
+    margin-bottom:-5px;
+  }
+  & + &__tit{
+    margin-top:30px;
+  }
+  &.type_row {
+    .field_box {
+      @include flex(s);
+      width:100%;
+      @include media-max($m){
+        display: block;
+      }
+      & + .field_box {
+        margin-top: 10px;
+        @include media-max($m){
+          margin-top:20px;
+        }
+      }
+      .input_wrap{
+        margin-bottom:0px;
+        @include flex(y);
+        & + .input, & + .txt {
+          margin-top: 10px;
+        }
+        &.s {
+          width: 360px;
+          @include media-max($xl){
+            width: 100%;
+          }
+        }
+        &.email {
+          @include flex-wrap(wrap);
+          .input {
+            min-width: 240px;
+            width: auto;
+            @include media-max($xl){
+              min-width: auto;
+              width: 100%;
+              flex: 1;
+            }
+          }
+          .select {
+            width: 247px;
+            @include media-max($xl){
+              width: 100%;
+              margin-top: 10px;
+              margin-left: 0;
+            }
+          }
+        }
+        &.date {
+          .date_select {
+            @include media-max($m){
+              @include flex(all);
+              width: 100%;
+            }
+            .com_datepicker {
+              @include media-max($m){
+                flex: 1;
+              }
+            }
+          }
+          @include media-max($m){
+            flex-direction: column;
+            align-items: flex-start;
+            .chk_wrap {
+              margin-left: 0;
+              margin-top: 10px;
+            }
+          }
+        }
+      }
+      .tit {
+        padding-top: 13px;
+        width: 120px;
+        margin-right: 20px;
+        font-size: 14px;
+        font-weight: 500;
+        line-height: 1.43;
+        letter-spacing: normal;
+        @include media-max($m){
+          padding-top:0;
+          padding-bottom:10px;
+          width:100%;
+          display: inline-block;
+        }
+      }
+      .input_box{
+        width:calc(100% - 120px);
+        @include media-max($m){
+          width:100%;
+        }
+        .txt {
+          display: inline-block;
+        }
+      }
+      .input {
+        min-width: 360px;
+        &.s {
+          width: 360px;
+          @include media-max($xl){
+            width: 100%;
+          }
+        }
+        &.xs {
+          min-width: 150px;
+          width: auto;
+          @include media-max($xl){
+            width: 100%;    
+            min-width: auto;
+          }
+        }
+        &::placeholder {
+          font-size:14px;
+        }
+        @include media-max($m){
+          min-width: auto;
+          width:100%;
+        }
+      }
+      .select {
+        &.s {
+          width: 360px;
+          @include media-max($xl){
+            width: 100%;
+          }
+        }
+      }
+      .icon {
+        display: inline-block;
+        margin: 0 5px;
+      }
+      .com_btn{
+        &.s{
+          height:45px;
+          min-width: 110px;
+          @include media-max($xl){
+            min-width: 80px;
+          }
+        }
+      }
+      .tip_field{
+        margin-top:10px;
+        font-size: 14px;
+        font-weight: 600;
+        letter-spacing: normal;  
+        @include media-max($m){
+          font-size: 13px;
+        }
+      }
+    }
+  }
+}
+//! 정보확인 폼 info view from
+.com_info_sec{
+  border-top:1px solid $c-border;
+  @include media-max($m){
+    padding:10px 20px 20px;
+    border:1px solid $c-border;
+    border-radius: 5px;
+  }
+  .field_box{
+    border-bottom:1px solid $c-border;
+    padding:20px;
+    @include flex(y);
+    @include media-max($m){
+      padding:17px 0;
+    }
+    .tit{
+      width:160px;
+      font-size: 14px;
+      font-weight: 600;
+      letter-spacing: normal;
+      @include media-max($m){
+        width:100px;
+      }
+    }
+    .info_box{
+      width:calc(100% - 160px);
+      font-size: 14px;
+      letter-spacing: normal;
+      color: #666;   
+      @include media-max($m){
+        width:calc(100% - 100px);
+      }
+    }
+    .input_num{
+      width:100px
+    }
+  }
+}
+//date picker
+.com_datepicker {
+	// padding-right: 13px;
+	// background-image: url(../../../assets/img/icon_calendar.svg);
+  // background-repeat: no-repeat;
+  // background-position: right center;
+  &[type=date]{
+    padding-right:3px;
+  }
+  width:113px;
+}

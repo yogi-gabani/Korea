@@ -1,0 +1,16 @@
+//!^text style
+
+.com_point_txt {
+  color: $point;
+}
+// !page title
+.com_pg_tit {
+  font-size: 30px;
+  font-weight: 800;
+  line-height: 1.17;
+  letter-spacing: normal;
+  color: $black;
+  @include media-max($m) {
+    font-size: 20px;
+  }
+}

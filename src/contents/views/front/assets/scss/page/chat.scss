@@ -1,0 +1,382 @@
+@import '../common/variables';
+
+//!채팅
+.p_chat{
+  .container{
+    padding-bottom:0;
+    overflow: hidden;
+    max-height: 97vh;
+    @include media-max($l){
+      height: auto;
+      max-height:none;
+    }
+  }
+  .chat_wrap{
+    @include flex(between);
+    width:calc(100% + 60px);
+    height:100%;
+    margin-left:-30px;
+    border-top:1px solid $c-border;
+    @include media-max($xl) {
+      flex-direction: column;
+    }    
+    @include media-max($l) {
+      width:100%;
+      margin-left:0;
+      border:none;
+      border-radius: 5px;
+      overflow: hidden;
+    }
+    //&채팅 리스트
+    .list_sec{
+      width: 260px;
+      height:100%;
+      background: #fff;
+      @include media-max($xl) {
+        width:100%;
+        height:auto;
+        padding: 0;
+      }
+      @include media-max($l) {
+        border-radius: 0px 0px 5px 5px;
+        overflow: hidden;
+      }
+      &>.com_btn{
+        height: 43px;
+        width:100%;
+        border-radius: 0;
+      }
+      .list{
+        height:calc(100% - 92px);
+        overflow-y: auto;
+        border-right:1px solid $c-border;
+        @include media-max($xl) {
+          height:auto;
+          max-height: 20vh;
+        }
+        @include media-max($l) {
+          border:1px solid $c-border;
+          border-bottom:none;
+          border-radius: 5px 5px 0 0;
+          max-height: 40vh;
+        }
+        .link {
+          display: block;
+          width: 100%;
+        }
+        .item{
+          display: flex;
+          border-bottom:1px solid $c-border;
+          padding:20px;
+          position: relative;
+          @include media-max($xl) {
+            padding:20px 17px;
+          }
+          &.selected{
+            background: #f8f8f8;
+          }
+          .com_icon_new{
+            position: absolute;
+            top:20px;
+            left:20px;
+            @include media-max($xl) {
+              top:16px;
+              left:15px;
+            }
+          }
+          .profile_img{
+            margin-right:12px;
+            @include thumb(50px,50px);
+            border-radius: 100%;
+            background: url(../../img/img_profile_thumb.png) no-repeat center;
+            background-size: 100%;
+          }
+          .info{
+            width:calc(100% - 60px);
+            .name{
+              font-size: 13px;
+              line-height: 1.2;
+              letter-spacing: -0.33px;
+              margin-bottom:10px;
+              color: $point;
+            }
+            .preview{
+              font-size: 15px;
+              line-height: 1.14;
+              letter-spacing: -0.38px;
+              margin-bottom:4px;
+              @include multi-ellipsis(2)
+            }
+            .date{
+              font-size: 12px;
+              line-height: 1.17;
+              letter-spacing: -0.3px;
+              color: #999;
+              @include media-max($xl) {
+                font-size: 11px;
+                line-height: 1.18;
+                letter-spacing: -0.28px;
+              }
+            }
+          }
+        }
+        .no_data{
+          font-size:15px;
+          text-align: center;
+          font-weight: bold;
+          padding-block:30px;
+        }
+      }
+    }
+    //&채팅방
+    .chat_sec{
+      width: calc(100% - 260px);
+      height:100%;
+      display: flex; 
+      flex-direction: column;
+      @include media-max($xl) {
+        width:100%;
+        border: 0;
+        height: calc(67vh - 81px);
+      }
+      @include media-max($l) {
+        border:1px solid $c-border;
+        border-radius: 5px;
+        margin-top:20px;
+        overflow: hidden;
+        height: 80vh;
+      }
+      //^채팅내용
+      .chat_mid{
+        height: calc(100% - 49px);
+        background: $white;
+        @include media-max($xl) {
+          // height: calc(100% - 160px);
+        }
+        @include media-max($l) {
+          height:100%;
+        }
+        .scroll_body { 
+          height:calc(100% - 43px); 
+          overflow-y: auto; 
+          padding:30px 20px;
+          @include media-max($xl) {
+            padding:0 $pd-inline;
+          }
+          @include media-max($l) {
+            padding-block: 20px;
+          }
+        } 
+        .notice{
+          font-size: 14px;
+          line-height: 1.29;
+          letter-spacing: normal;
+          text-align: center;
+          color: #999;   
+          margin-bottom:39px;
+          @include flex(all);
+          @include media-max($l) {
+            margin-bottom:20px;
+          }
+          &:before{
+            @include beforeafter;
+            border:1px solid #ddd;
+            border-width: 1px 0;
+            width:25px;
+            height:5px;
+            margin-right:10px;
+          }
+          &:after{
+            @include beforeafter;
+            border:1px solid #ddd;
+            border-width: 1px 0;
+            width:25px;
+            height:5px;
+            margin-left:10px;
+          }
+        }
+        .date_area { 
+          font-size: 12px; 
+          line-height: 1.67; 
+          letter-spacing: -0.3px;
+          text-align: center; 
+          color: #666; 
+          position: relative; 
+          text-align: center; 
+          margin-bottom: 20px; 
+          @include media-max($xl) {
+            font-size:10px;
+            margin-bottom: 10px;
+          }
+          &:before { 
+            content: ''; 
+            display: block; 
+            position:absolute; 
+            width:100%; 
+            height: 1px; 
+            background-color: $c-border; 
+            top:9px; 
+            z-index: 1; 
+          } 
+          span { 
+            background: #fff; 
+            display: inline-block; 
+            padding:0 10px; 
+            position: relative; 
+            z-index: 2; 
+          } 
+        } 
+        .box { 
+          padding:15px 20px; 
+          font-size: 15px;
+          line-height: 1.47;
+          letter-spacing: -0.38px;
+          text-align: left;
+          max-width:400px; 
+          width:auto; 
+          border-radius:6px; 
+          position:relative; 
+          @include media-max($xl) {
+            font-size: 14px;
+            line-height: 1.57;
+            letter-spacing: -0.35px;
+            max-width: 206px;
+          }
+        } 
+        .img { 
+          border-radius:10px; 
+          overflow:hidden; 
+          max-width: 260px;
+          min-width: 260px;
+          @include media-max($xl) {
+            max-width: 206px;
+            min-width: 206px;
+          }
+          img { 
+            width:100%; 
+          } 
+        } 
+        :is(.get, .send){
+          padding-bottom: 25px; 
+          display: flex;
+          flex-direction: column;
+          @include media-max($xl) {
+            padding-bottom:20px;
+          }
+        }
+        .send{
+          align-items:flex-end;
+          .wrap{
+            .date_field{
+              order:1;
+              margin-right:10px;
+            }
+            .img{
+              order:2;
+            }
+            .box{
+              order:2;
+              background:#f5f7ff; 
+              &:after { 
+                content:''; 
+                display: block; 
+                width:8.8px; 
+                height: 6.7px; 
+                position:absolute; 
+                right:-8.8px; 
+                top:10px; 
+                background:url("../../img/chat_send.png"); 
+                background-size: cover; 
+              } 
+            }
+          }
+          
+        }
+        .get{
+          flex-direction: row;
+          .wrap{
+            max-width:calc(100% - 45px);
+            .date_field{
+              margin-left:10px;
+            }
+            .box{
+              background-color: #f8f8f8;
+              &:before { 
+                content:''; 
+                display: block; 
+                width:8.8px; 
+                height: 6.7px; 
+                position:absolute; 
+                left:-8.8px; 
+                top:10px; 
+                background:url("../../img/chat_get.png"); 
+                background-size: cover; 
+              } 
+            }
+          }
+        }
+        .wrap{
+          @include flex(_);
+          .date_field{
+            font-size:11px;
+            color:#999;
+            align-self: flex-end;
+            white-space: nowrap;
+          }
+        }
+        
+      }
+      //^채팅 입력창
+      .chat_bottom{
+        height: 43px;
+        background: #fff; 
+        display: flex; 
+        align-items: center; 
+        border-top: 1px solid $c-border;
+        .textarea { 
+          flex: 1;
+          padding:13px 15px; 
+          height: 43px; 
+          min-height: 43px; 
+          background: none; 
+          border:none; 
+          border-radius: 0; 
+          color:$black; 
+          font-size:14px; 
+          line-height: 1.2; 
+          letter-spacing: -0.35px;
+          &:focus { outline: none; } 
+          &::-webkit-input-placeholder{ color:#c4c4c4; opacity:1; font-size:14px;}
+          &:-ms-input-placeholder{color:#c4c4c4; opacity:1; font-size:14px;}
+          &::placeholder{color:#c4c4c4; opacity:1; font-size:14px;}
+          appearance: none;
+          @include media-max($xl) {
+          }
+        } 
+        .btn_file{
+          width:43px;
+          height:43px;
+          border-right:1px solid $c-border;
+          @include flex(all);
+          img{
+            width:20px;
+          }
+        }
+        .btn_send {
+          width: 94px;
+          min-width: auto;
+          border:none;
+          border-radius: 0;
+          color:$point;
+          height: 43px;
+          margin-left:0;
+          background: transparent;
+          border-left:1px solid $c-border;
+          @include media-max ($xl){
+            width:60px;
+          }
+        }
+      }
+    }
+  }
+}

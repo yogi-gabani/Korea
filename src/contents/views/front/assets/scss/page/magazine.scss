@@ -1,0 +1,251 @@
+@import '../common/variables';
+
+.p_magazine, .p_recommend {
+  //long banner
+  .sec_banner {
+    background: #323cec url('../../img/bg_banner.png') no-repeat center;
+    background-size: cover;
+    height: 180px;
+    @include media-max($xl) {
+      height: 260px;
+      background: #323cec url('../../img/bg_banner_m.png') no-repeat center;
+      background-size: contain;
+    }
+    @include media-max($m) {
+      height: 160px;
+    }
+  }
+
+  .sec_magazine, .sec_recommend {
+    background-color: $bg;
+    padding-top: 30px;
+    .com_center_wrap {
+      @include media-max($xl) {
+        padding-inline: $pd-inline;
+      }
+      .title {
+        font-size: 30px;
+        font-weight: 800;
+      }
+      .com_tab_wrap {
+        .content_tab {
+          gap: 5px;
+          @include flex(y);
+          gap: 15px;
+          width: 100%;
+          & > .item_tit {
+            display: block;
+            @include media-max(515px) {
+              display: none;
+            }
+          }
+          .item_tit {
+            font-size: 18px;
+            font-weight: bold;
+            padding: 5px 5px;
+            text-align: center;
+            cursor: pointer;
+            &.active {
+              color: $point;
+              border-bottom: 2px solid $point;
+            }
+          }
+          .swiper_wrap {
+            @include flex(y);
+            gap: 5px;
+            position: relative;
+            &.category {
+              width: 100%;
+              height: 38px;
+              display: none;
+              @include media-max(515px) {
+                display: block;
+              }
+              .swiper {
+                width: 75%;
+                text-align: center;
+                .item_tit {
+                  padding-inline: 15px;
+                }
+              }
+              .swiper-button-prev, .swiper-button-next {
+                min-width: 38px;
+                height: 38px;
+                border-radius: 100%;
+                background: $white;
+                color: $point;
+                box-shadow: 0 0 20px 0 rgba(0, 53, 255, 0.3);
+                &::after {
+                  font-size: 14px;
+                  font-weight: bold;
+                }
+                &.swiper-button-disabled {
+                  color: #999;
+                  opacity: 1;
+                  box-shadow: 0 0 20px 0 rgba(102, 102, 102, 0.2);
+                }
+              }
+            }
+          }
+        }
+      }
+      .list_wrap {
+        &.m-80 {
+          margin-top: 80px;
+        }
+        .tit {
+          @include flex(y);
+          gap: 20px;
+          font-size: clamp(15px, 3vw,24px);
+          font-weight: 600;
+          @include media-max($s) {
+            @include flex(between);
+          }
+          .more {
+            font-size: 14px;
+            padding: 8px 20px;
+            border-radius: 50px;
+            border: 1px solid $black;
+            @include media-max($s) {
+              padding: 5px 15px;
+            }
+          }
+        }
+        .list {
+          @include flex(evenly);
+          @include flex-wrap(wrap);
+          margin-top: 35px;
+          gap: 30px;
+          @include media-max($m) {
+            margin: auto;
+            margin-top: 25px;
+          }
+          .com_card_item {
+            background-color: $white;
+            padding: 37px 0 28px;
+            border-radius: 20px;
+            max-width: 380px;
+            min-width: 280px;
+            margin-left: 0;
+            @include media-max($m) {
+              min-width: 250px;
+              margin-left: 16px;
+              margin-bottom: 30px;
+            }
+            .thumb_img {
+              height: 130px;
+              object-fit: cover;
+              padding: 0 32px;
+            }
+            .info {
+              .icon_wrap {
+                @include flex(y);
+                justify-content: left;
+                flex-wrap: wrap;
+                gap: 5px;
+                padding-inline: 28px;
+                .icon_line_wrap {
+                  font-size: 16px;
+                }
+              }
+              .title, .description {
+                margin-top: 20px;
+                padding-inline: 28px;
+              }
+              .title {
+                font-size: 20px;
+                font-weight: 600;
+              }
+              .description {
+                font-size: 16px;
+              }
+            }
+          }
+        }
+      }
+      .com_paging {
+        padding: 30px 0 110px;
+      }
+    }
+  }
+}
+
+.p_recommend .sec_recommend {
+  .title_wrap {
+    @include flex(between);
+    gap: 20px;
+    @include media-max($s) {
+      @include flex(column);
+    }
+    .title {
+      font-size: 24px;
+      font-weight: bold;
+    }
+    .btn_wrap {
+      @include flex(y);
+      gap: 7px;
+      .com_btn, .dropdown {
+        min-width: 115px;
+        padding-inline: 20px;
+        height: 40px;
+        border-radius: 50px;
+      }
+    }
+  }
+}
+
+// Detail component 
+.p_magazine_detail.com_detail {
+  .com_center_wrap.flex {
+    align-items: flex-start;
+    padding-inline: 0;
+    .sec_detail {
+      @include media-max($xl) {
+        padding-inline: 20px;
+      }
+      .title_wrap {
+        @include flex(column);
+        gap: 15px;
+        .tit {
+          font-size: 24px;
+          font-weight: bold;
+        }
+        .time {
+          font-size: 12px;
+          font-weight: 600;
+          color: #999;
+        }
+      }
+    }
+    .sec_other {
+      @include media-max($xl) {
+        padding-inline: 20px;
+      }
+      .magazine_list {
+        .content_wrap {
+          @include flex(column);
+          @include media-max($xl) {
+            flex-direction: row;
+          }
+          @include media-max($m) {
+            @include flex(column);
+          }
+          padding-inline: 12px;
+          .img {
+            height: 130px;
+          }
+          .hashtags {
+            @include flex(y);
+            gap: 5px;
+            flex-wrap: wrap;
+            .hash {
+              padding: 7px 13px;
+              border-radius: 5px;
+              background-color: $bg;
+            }
+          }
+        }
+      }
+    }
+  }
+}

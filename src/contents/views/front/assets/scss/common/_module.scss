@@ -1,0 +1,774 @@
+
+.com_bg {
+  background-color: $bg;
+} 
+
+
+// swiper bullet
+.com_swiper_bullet {
+  width: 13px;
+  height: 13px;
+}
+.com_card_wrap {
+  @include flex(s);
+  @include flex-wrap(wrap);
+  margin-left: -30px;
+  margin-top: 35px;
+  @include media-max($m) {
+    margin-left: -16px;
+    margin-top: 25px;
+  }
+  .com_card_item {
+    flex: 1;
+    min-width: calc((100% / 3) - 30px);
+    margin-left: 30px;
+    margin-bottom: 75px;
+    max-width: min-content;
+    @include media-max($m) {
+      min-width: calc((100% / 2) - 16px);
+      margin-left: 16px;
+      margin-bottom: 30px;
+    }
+  }
+}
+// card item : main, mentoring
+.com_card_item {
+  .thumb {
+    width: 100%;
+    .thumb_img {
+      @include border-radius(20px);
+      @include media-max($m) {
+        @include border-radius(12px);
+      }
+    }
+  }
+  .info {
+    margin-top: 20px;
+    // icon line blue icon
+    .icon_line_blue {
+      @include media-max($m) {
+        height: 26px;
+      }
+    }
+    .icon_line_blue {
+      display: inline-block;
+      height: 30px;
+      line-height: 30px;
+      margin-bottom: 16px;
+      padding: 0 15px;
+      border: 1px solid $point;
+      border-radius: 15px;
+      color: $point;
+      font-size: 16px;
+      font-weight: 600;
+      letter-spacing: normal;
+      @include media-max($m) {
+        height: 26px;
+        line-height: 26px;
+        margin-bottom: 10px;
+        font-size: 11px;
+      }
+    }
+    // icon bg blue icon
+    .icon_bg_blue {
+      min-width: 60px;
+      height: 26px;
+      padding: 0 6px;
+      line-height: 26px;
+      border-radius: 13px;
+      background-color: $point;
+      color: $white;
+      text-align: center;
+      font-size: 14px;
+      font-weight: 800;
+      letter-spacing: 1.4px;
+      &.white {
+        background-color: $white;
+      }
+    } 
+    // icon dot
+    .dot {
+      @include divider(2px,2px,5px);
+      &::after {
+        background: #999;
+        vertical-align: middle;
+      }
+    }
+    .icon_wrap {
+      @include flex(between);
+      margin-bottom: 16px;
+      .icon_line_blue {
+        margin-bottom: 0;
+      }
+      .grade {
+        @include flex(y);
+        font-size: 14px;
+        font-weight: 600;
+        line-height: 1.2;
+        letter-spacing: normal;
+        color: $point;
+        &::before {
+          content: '';
+          background: url('../../img/icon_star_on.png') no-repeat 0 0;
+          width: 16px;
+          height: 16px;
+          background-size: contain;
+          display: inline-block;
+          margin-right: 4px;
+        }
+      }
+    }
+    .tit {
+      font-size: 20px;
+      font-weight: 600;
+      line-height: 1.5;
+      @include multi-ellipsis(2);
+      @include media-max($m) {
+        font-size: 14px;
+      }
+    }
+    .info_s {
+      @include flex(y);
+      margin-top: 16px;
+      font-size: 14px;
+      font-weight: 600;
+      line-height: 1.2;
+      letter-spacing: normal;
+      color: #999;
+      flex-wrap: wrap;
+      @include media-max($m) {
+        margin-top: 8px;
+        font-size: 12px;
+      }
+    }
+    .info_txt {
+      letter-spacing: 0;
+    }
+    .btn_share {
+      margin-left: auto;
+      width: 18px;
+      height: 18px;
+    }
+  }
+}
+// job card item : match job
+.com_job_item {
+  position: relative;
+  padding: 28px 20px;
+  border-radius: 5px;
+  border: solid 1px #ccc;
+  background: url('../../img/bg_job.png') no-repeat center;
+  background-size: cover;
+  overflow: hidden;
+  @include media-max($xl) {
+    width: calc((100% / 2) - 20px);
+    margin-left: 20px;
+    margin-top: 20px;
+  }
+  @include media-max($m) {
+    width: 100%;
+    padding:20px;
+  }
+  .tit {
+    width: 85%;
+    font-size: 18px;
+    font-weight: 600;
+    line-height: 1.24;
+    letter-spacing: normal;
+    color: #2c2c2c;
+    margin-bottom: 15px;
+    @include multi-ellipsis(2);
+  }
+  .info_tit {
+    font-size: 14px;
+    line-height: 1.41;
+    letter-spacing: normal;
+    text-align: left;
+    color: #666;
+  }
+  .info_s {
+    margin-top: 20px;
+    font-size: 14px;
+    font-weight: 600;
+    line-height: 1.2;
+    letter-spacing: normal;
+    text-align: left;
+    color: #535353;
+    .icon {
+      display: inline-block;
+      height: 20px;
+      line-height: 20px;
+      padding: 0 4px;
+      margin-left: 10px;
+      font-size: 12px;
+      font-weight: 300;
+      letter-spacing: normal;
+      color: #999;
+      background: $white;
+      border: 1px solid #e4e5ed;
+    }
+  }
+  .tag_list {
+    @include flex(y);
+    flex-wrap: wrap;
+    margin-top: 10px;
+    margin-right:40px;
+    gap:3px 7px;
+    .tag_item {
+      font-size: 13px;
+      letter-spacing: normal;
+      text-align: left;
+      color: #999;
+      word-break: break-all;
+    }
+  }
+  .btn_like {
+    position: absolute;
+    right: 22px;
+    top: 32px;
+    width: 22px;
+    height: 20px;
+    z-index: 3;
+    background: url('../../img/icon_like.png') no-repeat 0 0;
+    background-size: contain;
+    &.active {
+      background: url('../../img/icon_like_on.png') no-repeat 0 0;
+      background-size: contain;
+    }
+    @include media-max($m){
+      top:20px;
+      right:20px;
+    }
+  }
+  .graph {
+    position: absolute;
+    right: 22px;
+    bottom: 60px;
+    @include media-max($m){
+      right:20px;
+    }
+    .percent {
+      font-size: 14px;
+      font-weight: 500;
+      line-height: 1.43;
+      letter-spacing: normal;
+      color: #010101;
+    }
+    .icon_graph {
+      display: block;
+      width: 25px;
+      height: 21px;
+    }
+  }
+  .btn_more{
+    position: absolute;
+    left:0;
+    top:0;
+    width:100%;
+    height: 100%;
+    z-index: 2;
+  }
+} 
+
+//!확인 ok 페이지, completion / approval 
+.com_ok{
+  font-size: 15px;
+  line-height: 1.47;
+  text-align: center;
+  letter-spacing: normal;
+  @include media-max($m){
+    font-size:13px;
+    line-height: 1.54;
+  }
+  .icon{
+    width:150px;
+    margin-bottom:15px;
+    margin-inline: auto;
+    @include media-max($m){
+      width:120px;
+      margin-bottom:10px;
+    }
+  }
+  .tit{
+    font-size: 20px;
+    line-height: 1.2;
+    font-weight: bold;
+    color: #000;
+    margin-bottom:10px;  
+    @include media-max($m){
+      font-size:18px;
+    } 
+  }
+  .tip{
+    color:$point;
+    font-size: 15px;
+    line-height: 1.2;
+    margin-bottom:20px;
+    @include media-max($m){
+      font-size:13px;
+    }
+  }
+  .text_box{
+    min-height: 100px;
+    margin: 20px 0;
+    padding: 13.5px;
+    border-radius: 5px;
+    border: solid 1px #e4e5ed;
+    text-align: left;
+  }
+  .info_box{
+    padding: 19px;
+    border-radius: 5px;
+    background-color: $lightBlue;  
+    @include flex(y);
+    @include flex-wrap;
+    text-align: left;
+    font-size: 15px;
+    line-height: 1.67;
+    letter-spacing: normal; 
+    @include media-max($m){
+      font-size:13px;
+    }
+    .tit_field{
+      width:58px;
+    } 
+    .info_field{
+      width: calc(100% - 58px);
+      color:$point;
+    }
+    .dot_list{
+      margin-top:-13px;
+      @include media-max($m){
+        margin-top:-10px;
+      }
+      .item{
+        padding-left:10px;
+        margin-top:13px;
+        line-height: 1.33;
+        @include media-max($m){
+          margin-top:10px;
+        }
+        &:before{
+          @include beforeafter;
+          width: 4px;
+          height: 4px;
+          border-radius: 100px;
+          margin-right:6px;
+          margin-left:-10px;
+          background-color: $point; 
+          vertical-align: 3px;    
+        }
+      }
+    }
+  }
+  .detail{
+    &+.info_box{
+      margin-top:20px;
+    }
+  }
+  .notice_txt{
+    text-align: center;
+    width:100%;
+  }
+  .com_btn_wrap{
+    margin-top:25px;
+  }
+}
+//!agree
+.com_agree_section{
+  margin-top:27px;
+  font-size:14px;
+  .all{
+    border-bottom:1px solid $c-border;
+    padding-bottom:9.5px;
+    margin-bottom:12.5px;
+    .com_chk{
+      &+label{
+        font-weight: 600;  
+        font-size:14px; 
+        &:before{
+          width:25px;
+          height:25px;
+          background-size: 12px auto;
+        }
+      }
+    }
+  }
+  .list{
+    margin-top:-5px;
+    .item{
+      margin-top:5px;
+      @include flex(between);
+    }
+  }
+  .txt_required{
+    color:#ff7262;
+  }
+}
+//tip box
+.com_tip_box{
+  @include media-max($m){
+    font-size:14px;
+  }
+  .com_info_sec + &{
+    margin-top:20px
+  }
+  .com_input_sec + &{
+    margin-top:30px;
+  }
+  padding: 24px;
+  border-radius: 10px;
+  border: solid 1px #dfdfdf;
+  background-color: #f5f5f9;
+  @include media-max($m){
+    padding:20px;
+  }
+  .tit{
+    font-size: 14px;
+    font-weight: bold;
+    line-height: 0.71;   
+    letter-spacing: normal; 
+    padding-bottom:15px;
+  }
+  .dot_list{
+    margin-top:-15px;
+    @include media-max($m){
+      margin-top:-10px;
+    }
+    .item{
+      padding-left:10px;
+      margin-top:15px;
+      line-height: 1.33;
+      @include media-max($m){
+        margin-top:10px;
+        font-size:14px;
+      }
+      &:before{
+        @include beforeafter;
+        width: 2px;
+        height: 2px;
+        border-radius: 100px;
+        margin-right:6px;
+        margin-left:-10px;
+        background-color: #333; 
+        vertical-align: 5px;    
+      }
+    }
+  }
+}
+//tag list
+.com_tag_list {
+  margin-top: -10px;
+  .com_btn {
+    min-width: 72px;
+    height: 36px;
+    font-size: 14px;
+    font-weight: normal;
+    margin-right: 10px;
+    margin-top: 10px;
+    padding: 0 8px;
+    @include media-max($m) {
+      min-width: 56px;
+      height: 29px;
+      font-size: 13px;
+    }
+    &.active {
+      border: solid 2px $point;
+      background: #fff;
+      color: $point;
+      font-weight: bold;
+    }
+  }
+  &.type_select {
+    .com_btn {
+      border: 0;
+      color: #222;
+      margin: 0 0 5px;
+      padding: 10px 20px;
+      cursor: pointer;
+      &.active {
+        border: 2px solid $point;
+        color: $point;
+        font-weight: bold;
+      }
+      & + .com_btn {
+        margin-left: 5px;
+      }
+    }
+  }
+  &.select_list {
+    margin-top: 0px;
+  }
+}
+// job detail - company info
+.com_top_box {
+  .company_logo {
+    width: 165px;
+    height: 30px;
+    margin-right: 53px;
+    @include media-max($xl) {
+      width: auto;
+      height: auto;
+      margin: 0 auto;
+      padding: 0 20px;
+    }
+  }
+  .company_info {
+    @include media-max($xl) {
+      margin-top: 50px;
+    }
+    .info_box {
+      @include flex(y);
+      margin-bottom: 19px;
+      font-size: 16px;
+      font-weight: 500;
+      line-height: 1.2;
+      letter-spacing: -0.8px;
+      @include media-max($xl) {
+        @include flex-wrap(wrap);
+        font-size: 14px;
+        margin-bottom: 14px;
+        .bar {
+          &::after {
+            display: none;
+            margin-inline: 5px;
+          }
+        }
+      }
+      span {
+        @include media-max($xl) {
+          order: 3;
+          margin-top: 5px;
+        }
+      }
+      .name {
+        padding: 0 10px 0 0;
+        @include media-max($xl) {
+          order: 1;
+        }
+      }
+      .desc {
+        padding: 0 10px 0 0;
+        color: #666;
+        @include media-max($xl) {
+          order: 2;
+          font-size: 13px;
+          > .bar {
+            &:last-child {
+              &::after {
+                display: inline-block;
+              }
+            }
+          }
+        }
+      }
+    }
+    .info_tit {
+      font-size: 24px;
+      font-weight: bold;
+      line-height: 1.17;
+      letter-spacing: -0.6px;
+      @include media-max($xl) {
+        font-size: 16px;
+        margin-bottom: 10px;
+      }
+    }
+  }
+  .info_date {
+    margin-left: auto;
+    color: #999;
+    font-size: 14px;  
+    line-height: 2;
+    @include media-max($m) {
+      font-size: 12px;
+    }
+    .date {
+      color: $fc-default;
+    }
+    .info_txt {
+      @include flex(s);
+      & + .info_txt {
+        @include media-max($xl) {
+          margin-left: 10px;
+        }
+      }
+    }
+    @include media-max($xl) {
+      margin-left: 0;
+      @include flex(s);
+    }
+  }
+}
+// icon
+.com_icon_status {
+  display: inline-block;
+  margin: 0 2px;
+  height: 22px;
+  line-height: 22px;
+  padding: 0 5px;
+  border: solid 1px #999;
+  background-color: #fff;
+  font-size: 12px;
+  font-weight: 300;
+  &.bg_green {
+    background-color: #e1f8d9;
+  }
+  &.line_green {
+    border: solid 1px $green;
+    color: $green;
+  }
+  &.bg_orange {
+    background-color: #ffeacb;
+  }
+  &.line_orange {
+    border: solid 1px #ff7e5d;
+    color: #df603f;
+  }
+  &.arrow_right {
+    &:after {
+      content:'';
+      display: inline-block;
+      width: 10px;
+      height: 10px;
+      border: solid $fc-default;
+      border-width: 1px 1px 0 0;
+      transform: rotate(45deg);
+      margin-left: -4px;
+    }
+    &.arrow_green {
+      &:after {
+        border-color: $green;
+        width: 6px;
+        height: 6px;
+        margin-left: 2px;
+        vertical-align: 1px;
+      }
+    }
+  }
+}
+
+// 이미지 파일첨부 mentoring, company
+.com_input_upload {
+  margin-left: 13px;
+  margin-bottom: 13px;
+  width: 164px;
+  height: 120px;
+  border-radius: 5px;
+  border: solid 1px #e4e5ed;
+  background-color: #fff;
+  @include media-max($m) {
+    margin-left: 0px;
+    margin-bottom: 8px;
+    width: calc((100% / 2) - 5px);
+    height: auto;
+    align-self: stretch;
+  }
+  .input_file {
+    display: none;
+  }
+  .btn_upload {
+    display: block;
+    width: 100%;
+    height: 100%;
+    margin-left: 0px;
+    background: url('../../img/icon_upload.png') no-repeat center;
+    background-size: 25px 25px;
+    @include media-max($m) {
+      background-size: 18px 18px;
+    }
+  }
+}
+// mentoring file upload
+.com_attach_section {
+  @include flex(all);
+  @include flex-wrap(wrap);
+  border-bottom: 1px solid #dfdfdf;
+  padding: 7px 20px;
+  @include media-max($m) {
+    @include flex(between);
+    padding: 7px 10px;
+  }
+  .img_box {
+    position: relative;
+    margin-bottom: 10px;
+    @include media-max($m) {
+      width: calc((100% / 2) - 5px);
+      height: auto;
+      margin-bottom: 8px;
+    }
+    & + .img_box {
+      margin-left: 10px;
+      @include media-max($m) {
+        margin-left: 0px;
+      }
+    }
+    .btn_del {
+      position: absolute;
+      top: -5px;
+      right: -5px;
+      padding: 0;
+      min-width: 20px;
+      width: 20px;
+      height: 20px;
+      background: #fff url('../../img/icon_upload.png') no-repeat center;
+      background-size: 12px;
+      transform: rotate(45deg);
+      border: 1px solid $c-border;
+      border-radius: 100%;
+    }
+    .img_upload {
+      width: 164px;
+      height: 120px;
+      border-radius: 5px;
+      @include media-max($m) {
+        width: 100%;
+        height: auto;
+      }
+    }
+  }
+}
+//sub title
+.com_sub_tit_wrap {
+  .pg_tit_wrap {
+    @include flex(between);
+    margin-bottom: 18px;
+    @include media-max($m) {
+      @include flex(column);
+      align-items: flex-start;
+      margin-bottom: 15px;
+    }
+    .com_pg_tit {
+      font-size: 30px;
+      font-weight: bold;
+      line-height: 1.75;
+      letter-spacing: normal;
+      @include media-max($m) {
+        font-size: 16px;
+        font-weight: bold;
+        line-height: 1.39;
+      }
+    }
+  }
+  .com_btn_wrap {
+    margin-top: 0;
+    @include media-max($m) {
+      width: 100%;
+      margin-top: 16px;
+    }
+  }
+  .btn_all_list {
+    min-width: 145px;
+    font-size: 15px;
+    @include media-max($m) {
+      width: 100%;
+      flex: 1;
+      min-width: auto;
+    }
+  }
+  .com_tab_wrap {
+    margin-top: 40px;
+    @include media-max($m) {
+      margin-top: 20px;
+    }
+  }
+}

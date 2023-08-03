@@ -1,0 +1,402 @@
+@import '../common/variables';
+
+.p_match {
+  .swiper_wrap {
+    position: relative;
+  }
+  .com_center_wrap {
+    @include media-max($xl) {
+      padding-inline: $pd-inline;
+    }
+  }
+  // icon bg blue icon
+  .icon_bg_blue {
+    min-width: 60px;
+    height: 26px;
+    padding: 0 6px;
+    line-height: 26px;
+    border-radius: 13px;
+    background-color: $point;
+    color: $white;
+    text-align: center;
+    font-size: 14px;
+    font-weight: 800;
+    letter-spacing: 1.4px;
+    &.white {
+      background-color: $white;
+    }
+  } 
+  // icon line blue icon
+  .icon_line_blue {
+    display: inline-block;
+    height: 30px;
+    padding: 6px 15px;
+    border: 1px solid $point;
+    color: $point;
+    border-radius: 15px;
+    @include media-max($m) {
+      height: 26px;
+    }
+  }
+  // arrow >
+  .arrow_right {
+    &:after{
+      content:'';
+      display: inline-block;
+      width: 10px;
+      height: 10px;
+      border: solid $fc-default;
+      border-width: 1px 1px 0 0;
+      transform: rotate(45deg);
+    }
+    &.arrow_green {
+      &:after {
+        border-color: $green;
+        width: 6px;
+        height: 6px;
+        margin-left: 2px;
+        vertical-align: 1px;
+      }
+    }
+  }
+  // bar |
+  .bar {
+    @include divider(1px,12px, 10px);
+    @include media-max($m) {
+      @include divider(1px,12px, 8px);
+      &:after{
+        vertical-align: -2px;
+      }
+    }
+  }
+  .com_overlay {
+    .alert_box {
+      border-radius: 5px;
+    }
+  }
+  //swiper pagination
+  .custom_pagination {
+    @include flex(all);
+    position: absolute;
+    width: 100%;
+    bottom: 15px;
+    .com_swiper_bullet {
+      width: 10px;
+      height: 10px;
+      margin: 0 7px;
+      z-index: 1;
+      &.swiper-pagination-bullet-active {
+        opacity: 0.4;
+        background-color: #fff;
+      }
+    }
+  }
+  // match job
+  .sec_job {
+    padding: 23px 0 44px;
+    .pg_tit_wrap {
+      margin-bottom: 18px;
+      .com_pg_tit {
+        @include media-max($m) {
+          font-size: 18px;
+        }
+      }
+    }
+  }
+  // job list wrap
+  .job_wrap {
+    .pg_tit_wrap {
+      @include flex(between);
+      margin-bottom: 18px;
+      @include media-max($m) {
+        @include flex(column);
+        align-items: flex-start;
+        margin-bottom: 15px;
+      }
+      .com_pg_tit {
+        font-size: 24px;
+        font-weight: bold;
+        line-height: 1.75;
+        letter-spacing: normal;
+        @include media-max($m) {
+          font-size: 16px;
+          font-weight: bold;
+          line-height: 1.39;
+        }
+      }
+      .btn_all_list {
+        margin-left: auto;
+        font-size: 15px;
+        @include media-max($m) {
+          margin-left: 0;
+          width: 100%;
+          margin-top: 16px;
+        }
+      }
+    }
+    .list_wrap {
+      @include flex(between);
+      position: relative;
+      .list {
+        @include flex(y);
+        @include flex-wrap(wrap);
+        margin-left: -10px;
+        @include media-max($xl) {
+          width: calc(100% - 40px);
+          margin-left: 0px;
+        }
+        .com_job_item {
+          width: calc((100% / 4) - 10px);
+          height: 230px;
+          margin-left: 10px;
+          @include media-max($xl) {
+            width: 100%;
+            margin-top: 0;
+            display: none;
+            margin-left: 0px;
+            height: 222px;
+            &:first-child {
+              display: block;
+            }
+          }
+          @include media-max($m) {
+            width: 100%;
+          }
+        }
+      }
+      .btn_more_job {
+        width: 40px;
+        height: 230px;
+        margin: 0 0 0 10px;
+        padding: 0 10px;
+        border-radius: 5px;
+        border: solid 1px #ccc;
+        background-color: #fff;    
+        word-wrap: break-word;
+        font-size: 14px;
+        line-height: 1.14;
+        letter-spacing: normal;
+        color: #000;
+        &.arrow_right {
+          &:after {
+            margin-left: -4px;
+            margin-top: 12px;
+          }
+        }
+        @include media-max($xl) {
+          height: 222px;
+        }
+      }
+    }
+  }
+  // company detail info
+  .sec_company_info {
+    padding: 47px 0 143px;
+    @include media-max($xl) {
+      padding: 23px 0 40px;
+    }
+    .com_top_box {
+      padding: 32px 36px 32px 48px;
+      @include border-radius(0 0 5px 5px);
+      border: solid 1px #ccc;
+      background-color: #fff;
+      border-top: 2px solid #000;
+      @include flex(y);
+      @include media-max($xl) {
+        flex-direction: column;
+        align-items: flex-start;
+        padding: 58px $pd-inline 22px;
+      }
+    }
+    .icon_star {
+      &::before {
+        content: '';
+        display: inline-block;
+        width: 22px;
+        height: 22px;
+        margin-right: 6px;
+        background: url('../../img/icon_star_blue.png') no-repeat 0 0;
+        background-size: contain;
+      }
+      &.active {
+        &::before {
+          background: url('../../img/icon_star_active.png') no-repeat 0 0;
+          background-size: contain;
+        }
+      }
+    }
+    .contents_box {
+      margin-top: 40px;
+      @include media-max($xl) {
+        margin-top: 20px;
+      }
+      .content_tab {
+        @include flex(s);
+        margin-bottom: -2px;    
+        margin-left: 1px;
+        .tab {
+          position: relative;
+          min-width: 150px;
+          height: 50px;
+          margin-left: -1px;
+          line-height: 50px;
+          font-size: 18px;
+          font-weight: 500;
+          letter-spacing: normal;
+          text-align: center;
+          border: solid 1px #ccc;
+          border-bottom: 0;
+          background-color: #fff;
+          @include border-radius(5px 5px 0 0);
+          cursor: pointer;
+          @include media-max($xl) {
+            min-width: auto;
+            flex: 1;
+            font-size: 14px;
+          }
+          &:hover, &.active {
+            border: solid 2px $fc-default;
+            border-bottom: 0;    
+            z-index: 1;
+            &::after {
+              display: none;
+            }
+          }
+          &::after {
+            content: '';
+            display: block;
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            height: 2px;
+            background: $fc-default;
+          }
+        }
+      }
+      .contents {
+        padding: 35px 35px 0;
+        border: solid 1px #ccc;
+        border-top: 2px solid $fc-default;  
+        background: $white;
+        @include border-radius(0 0 5px 5px);
+        @include media-max($xl) {
+          padding: 0 $pd-inline;
+        }
+        .contents_top {
+          padding: 17px 0 0;
+          @include flex(between);
+          border-bottom: 1px solid #e8e8ef;
+          @include media-max($m) {
+            @include flex(column);
+            align-items: flex-start;
+          }
+        }
+        .graph_wrap {
+          position: relative;
+          padding: 30px 0;
+          @include media-max($m) {
+            width: 100%;
+            padding: 22px 0;
+            margin: 20px 0;
+          }
+        }
+        .graph_list {
+          min-width: 400px;
+          height: 60px;
+          padding: 0 30px;
+          border-bottom: 1px solid $fc-default;
+          border-top: 1px solid #f4f6f8;
+          @include flex(all);
+          @include media-max($xl) {
+            min-width: 280px;
+            height: 50px;
+            padding: 0 20px;
+          }
+          @include media-max($m) {
+            min-width: auto;
+            padding: 0 10px;
+          }
+          .graph_item {
+            position: relative;
+            width: calc((100% / 3) - 24px);
+            height: 100%;
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-end;
+            font-size: 14px;
+            line-height: 1.43;
+            letter-spacing: normal;
+            color: #666;
+            @include media-max($xl) {
+              width: calc((100% / 3) - 19px);
+              font-size: 12px;
+            }
+            & + .graph_item {
+              margin-left: 24px;
+              @include media-max($xl) {
+                margin-left: 19px;
+              }
+            }
+            .bg {
+              width: 100%;
+              .bg_txt {
+                position: relative;
+                display: inline-block;
+                width: 100%;
+                top: -20px;
+                text-align: center;
+              }
+              &.bg_blue {
+                background: $point;
+              }
+              &.bg_emerald {
+                background: #01be9d;
+              }
+              &.bg_green {
+                background: $green;
+              }
+            }
+            .graph_txt {
+              position: absolute;
+              bottom: -25px;
+              text-align: center;
+              width: 100%;
+            }
+          }
+
+        }
+        .detail_wrap {
+          padding: 29px 0;
+          @include media-max($xl) {
+            padding: 20px 0;
+          }
+          .txt {
+            margin-block: 20px 20px;
+            font-size: 16px;
+            line-height: 1.75;
+          }
+        }
+      }
+    }
+    .com_btn_wrap {
+      margin-bottom: 10px;  
+      @include media-max($xl) {
+        margin-top: 20px;
+        margin-bottom: 20px;
+      }
+      .com_btn {
+        @include media-max($xl) {
+          min-width: auto;
+          flex: 1;
+        }
+      }
+    }
+    .job_wrap {
+      margin-top: 40px; 
+      @include media-max($xl) {
+        margin-top: 30px;
+      }
+    }
+  }
+}

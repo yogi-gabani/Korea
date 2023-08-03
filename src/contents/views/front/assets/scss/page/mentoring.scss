@@ -1,0 +1,315 @@
+@import '../common/variables';
+
+.com_mentoring {
+  &.com_bg {
+    background: $bg;
+    padding-block: 50px 133px;
+    @include media-max($m) {
+      padding: 25px $pd-inline 87px;
+    }
+    .pg_tit{
+      margin-bottom: 25px;
+      font-size: 30px;
+      font-weight: 800;
+      line-height: 1.17;
+      letter-spacing: normal;
+      text-align: center;
+      color: #000;
+      @include media-max($m){
+        font-size: 18px;
+        margin-bottom: 15px;
+      }
+    }
+    .box{
+      width: 800px;
+      margin-inline:auto;
+      padding: 23px 30px 30px 30px;
+      border-radius: 20px;
+      border: solid 1px #e4e5ed;
+      background-color: #fff; 
+      @include media-max($m){
+        width:100%;
+        padding:10px $pd-inline 30px;  
+        border-radius: 5px;
+      }
+      .tit_field {
+        &.flex {
+          @include flex(between);
+          @include media-max($m) {
+            flex-direction: column;
+            align-items: flex-start;
+          }
+          .sub {
+            font-size: 13px;
+            line-height: 1.54;
+            letter-spacing: normal;
+            color: #666;
+            @include media-max($m) {
+              font-size: 12px;
+              margin-top: 4px;
+            }
+          }
+        }
+      }
+      .textarea {
+        line-height: 1.4;
+      }
+      .com_btn_wrap {
+        margin-top: 20px;
+      }
+    }
+  }
+  .com_center_wrap {
+    @include media-max($xl) {
+      padding-inline: $pd-inline;
+    }
+  }
+  // long banner
+  .sec_banner {
+    background: #323cec url('../../img/bg_banner.png') no-repeat center;
+    background-size: cover;
+    height: 180px;
+    @include media-max($xl) {
+      height: 260px;
+      background: #323cec url('../../img/bg_banner_m.png') no-repeat center;
+      background-size: contain;
+    }
+    @include media-max($m) {
+      height: 160px;
+    }
+  }
+  // list
+  .sec_mentoring {
+    padding: 30px 0 130px;
+    @include media-max($m) {
+      padding: 30px 0 50px;
+    }
+  }
+  // intro
+  .sec_intro {
+    padding: 30px 0 143px;
+    @include media-max($xl) {
+      padding: 30px 0 100px;
+    }
+    .intro_tit {
+      padding: 88px 0 53px;
+      font-size: 40px;
+      font-weight: bold;
+      line-height: 1.05;
+      letter-spacing: normal;
+      text-align: center;
+      color: #000;
+      @include media-max($xl) {
+        padding: 20px 0 23px;
+        font-size: 20px;
+      }
+    }
+    .intro_list {
+      @include flex(all);
+      @include flex-wrap(wrap);
+      margin-bottom: 50px;
+      @include media-max($xl) {
+        margin-left: -16px;
+        margin-bottom: 20px;
+      }
+      .intro_item {
+        @include flex(all);
+        padding: 0 26px;
+        margin: 0 13px;
+        flex-direction: column;
+        width: calc((100% / 3) - 27px);
+        height: 310px;
+        margin-bottom: 30px;
+        border-radius: 20px;
+        box-shadow: 0 10px 10px 0 rgba(0, 0, 0, 0.16);
+        border: solid 1px #dedede;
+        background-color: #fff;
+        text-align: center;
+        @include media-max($xl) {
+          max-width: calc((100%/2) - 16px);
+          min-width: calc((100%/2) - 16px);
+          height: 250px;
+          margin: 0 0 16px 16px;
+          border-radius: 10px;
+        }
+        &:last-child {
+          @include media-max($xl) {
+            max-width: 100%;
+            flex: 1;
+          }
+        }
+        .img {
+          width: 100px;
+          margin-bottom: 17px;
+          @include media-max($xl) {
+            width: 63px;
+          }
+        }
+        .item_tit {
+          font-size: 24px;
+          font-weight: bold;
+          line-height: 1.21;
+          letter-spacing: normal;
+          text-align: center;
+          color: #000;
+          @include media-max($xl) {
+            font-size: 14px;
+          }
+        }
+        .desc {
+          margin-top: 17px;
+          font-size: 18px;
+          line-height: 1.39;
+          letter-spacing: normal;
+          @include media-max($xl) {
+            font-size: 11px;
+          }
+        }
+      }
+    }
+    .process_list {
+      @include flex(x);
+      justify-content: space-between;
+      margin-bottom: 200px;
+      @include media-max($xl) {
+        flex-direction: column;
+        margin-bottom: 20px;
+      }
+      .process_item {
+        position: relative;
+        width: 150px;
+        @include media-max($xl) {
+          width: 100%;
+          margin-bottom: 10px;
+        }
+        &::after {
+          content: '';
+          position: absolute;
+          left: 154px;
+          top: 74px;
+          display: inline-block;
+          width: 35%;
+          height: 1px;
+          background-color: $point;
+          @include media-max($xl) {
+            width: 1px;
+            height: 10px;
+            left: 50%;
+            top: auto;
+          }
+        }
+        &:last-child {
+          &::after {
+            display: none;
+          }
+        }
+        .circle {
+          // flex-direction: column;
+          width: 150px;
+          height: 150px;
+          padding-top: 36px;
+          border: solid 1px $point;
+          border-radius: 100%;
+          background-color: #f5f7ff;    
+          text-align: center;
+          @include media-max($xl) {
+            // @include flex(s);
+            // flex-direction: row;
+            overflow: hidden;
+            border-radius: 10px;
+            width: 100%;
+            height: auto;
+            min-height: 50px;
+            max-height: 90px;
+            padding: 14px 20px;
+          }
+          .txt_box {
+            @include media-max($xl) {
+              float: left;
+              width: calc(100% - 30px);
+              text-align: left;
+            }
+          }
+          .num {
+            font-size: 30px;
+            font-weight: bold;
+            line-height: 0.8;
+            color: $point;
+            @include media-max($xl) {
+              float: left;    
+              margin-top: 3px;
+              font-size: 16px;
+              margin-right: 15px;
+            }
+          }
+          .desc {
+            margin-top: 20px;
+            font-size: 18px;
+            line-height: 1.33;
+            letter-spacing: normal;
+            color: #000;
+            @include media-max($xl) {
+              margin-top: 0;
+              font-size: 14px;
+              font-weight: bold;
+            }
+          }
+        }
+        .item_desc {
+          position: relative;
+          top: 62px;
+          font-size: 14px;
+          line-height: 1.43;
+          letter-spacing: -0.35px;
+          text-align: center;
+          color: #000;
+          @include media-max($xl) {  
+            top: auto;
+            margin-top: 8px;
+            width: 100%;
+            font-size: 13px;
+            text-align: left;
+            color: #666;
+          }
+        }
+      }
+    }
+    .com_btn_wrap {
+      @include media-max($xl) {
+        padding: 0 20px;
+      }
+      .com_btn {
+        &.line {
+          background: transparent;
+        }
+      }
+    }
+  }
+  .com_agree_section {
+    padding-bottom: 20px;
+    border-bottom: 1px solid #dfdfdf;
+    .com_btn {
+      &.txt {
+        margin-top: auto;
+      }
+    }
+  }
+}
+//!멘토 결제하기
+.p_mentoring_pay{
+  .com_info_sec{
+    border-top:none;
+    @include media-max($m){
+      border:none;
+      padding:0;
+      .block_m{
+        display: block;
+        margin-top:10px;
+      }
+    }
+  }
+  .com_agree_section{
+    border-bottom:none;
+    padding-bottom:0;
+  }
+}

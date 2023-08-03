@@ -1,0 +1,347 @@
+//!header
+.head {
+  margin-top:16px;
+  border-bottom:1px solid #f2f1f1;
+  padding-bottom:16px;
+  @include media-max($xl) {
+    padding-inline: $pd-inline;
+    margin-top:0;
+    padding-bottom:0;
+  }
+  .com_center_wrap {
+    @include flex(y);
+    @include media-max($xl) {
+      height:$m-head-h;
+      @include flex(between);
+    }
+  }
+  .logo  {
+    width:148px;
+    margin-right: 97px;
+    @include media-max($xl) {
+      width:89px;
+      min-width:89px;
+      margin-right: 10px;
+    }
+  }
+  .btn_bar {
+    display: none;
+    background: url("../../img/icon_bar.png") no-repeat;
+    background-size: contain;
+    background-position: center;
+    width:30px;
+    height:24px;
+    @include media-max($xl) {
+      display: flex;
+      flex: none;
+      margin-left: 13px;
+      width: 20px;
+      height: 20px;
+    }
+    @include media-max($m) {
+      margin-left: 6px;
+    }
+  }
+  &.active {
+    .btn_bar {
+      background-image: url("../../img/icon_close.png");
+      width:20px;
+      height:20px;
+    }
+    .gnb_container {
+      display: flex;
+      position: absolute;
+      z-index: 9;
+    }
+  }
+}
+//!gnb
+.gnb {
+  &_container {
+    display: flex;
+    align-items: center;
+    @include media-max($xl) {
+      display: none;
+      flex-direction: column;
+      position:fixed;
+      width:100%;
+      left:0;
+      top:$m-head-h;
+      height: calc(100vh - $m-head-h);
+      overflow-y: auto;
+      background-color: $bg;
+    }
+  }
+  //^메뉴
+  &_menu {
+    display: flex;
+    align-items: center;
+    margin-right:27px;
+    @include media-max($xl) {
+      order:3;
+      flex-direction: column;
+      background-color: $white;
+      width:100%;
+      margin-right:0;
+      border-top:1px solid #f2f1f1;
+    }
+    .depth01 {
+      @include media-max($xl) {
+        width:100%;
+        border-bottom:1px solid #f2f1f1;
+      }
+      & > .menu {
+        font-size: 16px;
+        font-weight: bold;
+        line-height: 1.17;
+        letter-spacing: -0.45px;  
+        margin-inline: 20px;
+        text-align: center;
+        padding-block: 8px;
+        &.active {
+          color: $point;
+        }
+        @include media-max($xl) {
+          margin-inline: 10px;
+        }
+        @include media-max($xl) {//이하
+          width:100%;
+          text-align: left;
+          display: flex;
+          justify-content: space-between;
+          align-items: center;
+          margin:0;
+          padding:20px $pd-inline;
+        }
+      }
+    }
+  }
+  //^링크
+  &_link {
+    display: flex;
+    align-items: center;
+    margin-left: auto;
+    @include media-max($xl) {
+      justify-content: center;
+      background: #fff;
+    }
+    .link {
+      font-size: 15px;
+      font-weight: 500;
+      letter-spacing: normal;
+      color: $white;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      position:relative;
+      margin-left: 7px;
+      @include media-max($xl) {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+        width: 100px;
+        height: 30px;
+        border-radius: 15px;
+        font-size: 13px;
+      }
+      @include media-max($m) {
+        margin-left: 6px;
+      }
+      img {
+        width:30px;
+      }
+      .push {
+        display: inline-block;
+        width: 16px;
+        height: 13px;
+        padding: 1px 2px;
+        border-radius: 7px;
+        background-color: #3db762;
+        position:absolute;
+        top:0;
+        left:-2px;
+        font-size: 10px;
+        font-weight: bold;
+        line-height: 1.1;
+        letter-spacing: normal;
+        text-align: center;
+        color: $white;
+      }
+      &.btn_login {
+        display: none;
+        background-color: $green;
+        width: 100px;
+        height: 30px;
+        @include media-max($xl) {
+          display: inline-flex;
+          width: 79px;
+          height: 29px;
+        }
+      }
+      &.btn_company_home {
+        margin-right: 31px;
+        width: 100px;
+        height: 30px;
+        border-radius: 15px;
+        background-color: $point;
+        @include media-max($xl) {
+          margin-right: 0px;
+          width: 79px;
+          height: 29px;
+        }
+      }
+      &.btn_push, &.btn_my {
+        width: 30px;
+        @include media-max($xl) {
+          margin-bottom: 0;
+        }
+      }
+      &.btn_push {
+        @include media-max($xl) {
+          margin-left: 12px;
+        }
+        @include media-max($m) {
+          margin-left: 6px;
+        }
+      }
+    }
+  }
+  //^버튼영역
+  &_btn {
+    display: flex;
+    align-items: center;
+    position:relative;
+    @include media-max($xl) {
+      order: 2;
+      width:100%;
+      .com_btn{
+        &.s{
+          height: 50px;
+          width:50%;
+          justify-content: space-between;
+          padding-inline: 30px;
+        }
+      }
+    }
+  }
+}
+//!!footer
+.footer {
+  background-color: #fff;
+  padding: 30px 30px;
+  @include media-max($xl) {
+    padding: 20px 20px;
+  }
+  .com_center_wrap {
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: space-between;
+    @include media-max($xl) {
+      flex-direction: column;
+    }
+    .logo {
+      width:239px;
+      img{
+        width:130px;
+      }
+      @include media-max($xl) {
+        width:80px;
+        img{
+          width: 100%;
+        }
+      }
+    }
+    .link {
+      width:calc((100% - 239px) / 2);
+      text-align: right;
+      @include media-max($xl) {
+        width:100%;
+      }
+      @include media-max($m) {
+        text-align: left;
+      }
+      .btn {
+        font-size: 16px;
+        font-weight: bold;
+        font-stretch: normal;
+        font-style: normal;
+        line-height: 1.88;
+        color: #333;
+        @include media-max($xl){
+          font-size: 13px;
+          line-height: 2.15;
+          letter-spacing: -0.33px;       
+        }
+      }
+    }
+    .menu {
+      width:calc((100% - 239px) / 2);
+      text-align: right;
+      margin-top:13px;
+      @include media-max($xl) {
+        margin-top:20px;
+        width:100%;
+        text-align: left;
+      }
+      .btn{
+        font-size: 15px;
+        line-height: 1.87;
+        letter-spacing: -0.38px;
+        text-align: left;
+        color: #fff; 
+        @include media-max($xl) {
+          font-size: 12px;
+          line-height: 2.33;
+          letter-spacing: -0.3px;     
+        }
+        &:not(:first-child):before{
+          content: "";
+          display: inline-block;
+          width: 1px;
+          height: 9px;
+          margin-inline:10px;
+          background-color: #5a5a5a;       
+          @include media-max($xl) {
+            margin-inline: 5px;
+          }
+        }
+      }
+    }
+    .info {
+      width:100%;
+      font-size: 14px;
+      font-weight: 300;
+      line-height: 1.57;
+      letter-spacing: -0.14px;
+      text-align: left;
+      color: #8c8c8c;
+      @include media-max($xl) {
+        margin-top:15px;
+        font-size: 12px;
+        line-height: 1.67;
+        letter-spacing: -0.3px;
+      }
+      .copy{
+        margin-top:26px;
+        @include media-max($xl) {
+          margin-top:19px;
+        }
+      }
+    }
+    .bar {
+      display: inline-block;
+      width: 1px;
+      height: 12px;
+      vertical-align: middle;
+      background: #eee;
+      margin: 0 10px;
+    }
+  }
+}
+
+.com_center_wrap {
+  max-width: $max-w;
+  margin: 0 auto;
+}

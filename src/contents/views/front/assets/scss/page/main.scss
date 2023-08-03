@@ -1,0 +1,810 @@
+@import '../common/variables';
+
+.p_main {
+  .swiper_wrap {
+    position: relative;
+  }
+  .com_center_wrap {
+    @include media-max($xl) {
+      padding-inline: $pd-inline;
+    }
+    .tit_wrap {
+      @include media-max($m) {
+        text-align: center;
+      }
+      &.center {
+        text-align: center;
+        .tit {
+          margin-bottom: 40px;
+          @include media-max($m) {
+            margin-bottom: 20px;
+          }
+        }
+        .ballon {
+          margin-left: 10px;
+        }
+      }
+      .tit {
+        font-size: 40px;
+        font-weight: 900;
+        line-height: 1.25;
+        letter-spacing: normal;
+        @include media-max($m) {
+          font-size: 24px;
+        }
+      }
+      .sub_tit {
+        margin-top: 19px;
+        font-size: 26px;
+        line-height: 1.54;
+        letter-spacing: normal;
+        color: #333;
+        @include media-max($m) {
+          font-size: 14px;
+        }
+      }
+    }
+    .ballon {
+      display: inline-block;
+      position: relative;
+      color: $point;
+      margin: 0 4px 0 0;
+      &::before {
+        content: '';
+        display: inline-block;
+        background: url('../../img/icon_ballon_blue.png') no-repeat center center;
+        background-size: cover;
+        width: 120%;
+        height: 140%;
+        position: absolute;
+        left: -16px;
+        top: -10px;
+        @include media-max($m) {
+          width: 125%;
+          height: 145%;
+          left: -10px;
+          top: -6px;
+        }
+      }
+    }
+    .list {
+      margin-top: 60px;
+      @include media-max($m) {
+        margin-top: 30px;
+      }
+    }
+  }
+  .com_btn {
+    padding: 0 30px;
+    @include media-max($xl) {
+      min-width: 82px;
+      padding: 0 17px;
+    }
+  }
+  .sec_bg {
+    background: #f8f8f8;
+    box-shadow: inset 0px 17px 13px -13px #ccc;
+  }
+  // visual
+  .sec_visual {
+    // background: $point url('../../img/bg_visual.png') no-repeat center;
+    background-size: cover;
+    padding-block: 41px 59px;
+    background-color: #edf7fe;
+    @include media-max($m) {
+      padding-block: 40px 40px;
+    }
+    .com_center_wrap {
+      @include flex(between);
+      @include media-max($m) {
+        @include flex(column);
+        padding-inline: $pd-inline;
+      }
+      .swiper_wrap {
+        max-width: 740px;
+        @include media-max($xl) {
+          max-width: 62%;
+        }
+        @include media-max($m) {
+          max-width: 100%;
+        }
+      }
+      .banner {
+        max-width: 430px;
+        @include media-max($xl) {
+          max-width: 36%;
+        }
+        @include media-max($m) {
+          max-width: 100%;
+          margin-top: 42px;
+        }
+      }
+    }
+  }
+  //long banner
+  .sec_banner {
+    background: #323cec url('../../img/bg_banner.png') no-repeat center;
+    background-size: cover;
+    height: 180px;
+    @include media-max($xl) {
+      height: 260px;
+      background: #323cec url('../../img/bg_banner_m.png') no-repeat center;
+      background-size: contain;
+    }
+    @include media-max($m) {
+      height: 160px;
+    }
+  }
+  //AI match
+  .sec_match, .sec_magazine {
+    padding-block: 150px 135px;
+    @include media-max($xl) {
+      padding-block: 72px 60px;
+    }
+    .com_center_wrap {
+      @include flex(x);
+      @include media-max($xl) {
+        @include flex(column);
+      }
+      .tit_wrap {
+        @include flex(s);
+        width: 40%;
+        min-width: 470px;
+        flex-direction: column;
+        @include media-max($xl) {
+          @include flex(all);
+          width: 100%;
+          min-width: auto;
+          text-align: center;
+        }
+        .tag_list {
+          @include flex(y);
+          @include flex-wrap(wrap);
+          margin: 24px 0 42px;
+          @include media-max($xl) {
+            margin: 15px 0 20px;
+          }
+          .tag_item {
+            font-size: 16px;
+            font-weight: 600;
+            line-height: 1.2;
+            letter-spacing: normal;
+            @include media-max($xl) {
+              font-size: 13px;
+              padding: 6px 6px;
+              line-height: 1;
+            }
+            & + .tag_item {
+              margin-left: 10px;
+              @include media-max($xl) {
+                margin-left: 5px;
+              }
+            }
+          }
+        }
+      }
+    }
+    .swiper_wrap {
+      width: 60%;
+      overflow: hidden;
+      @include media-max($xl) {
+        margin-top: 0;
+        width: calc(100% + 40px);
+        margin-left: -20px;
+      }
+      .swiper {
+        padding: 30px;
+        @include media-max($m) {
+          padding: 30px 10px 30px 20px;
+        }
+      }
+      .swiper-wrapper {
+        left: -100px;
+        @include media-max($m) {
+          left: -60px;
+        }
+      }
+      .swiper-slide {
+        min-width: 350px;
+        @include media-max($m) {
+          min-width: 260px;
+        }
+        &.swiper-slide-active {
+          .btn_more {
+            background: url('../../img/icon_more_circle_blue.png') no-repeat 0 0;
+            background-size: contain;
+          }
+        }
+        .btn_more {
+          position: absolute;
+          right: 30px;
+          bottom: 30px;
+          width: 47px;
+          height: 47px;
+          background: url('../../img/icon_more_circle_gray.png') no-repeat 0 0;
+          background-size: contain;
+        }
+      }
+      .slide_box {
+        position: relative;
+        padding: 33px 28px;
+        min-height: 280px;
+        border-radius: 20px;
+        box-shadow: 0 0 30px 0 rgba(0, 53, 255, 0.3);
+        background-color: $white;
+        .tit {
+          width: 85%;
+          margin-bottom: 18px;
+          font-size: 24px;
+          font-weight: 600;
+          line-height: 1.42;
+          letter-spacing: normal;
+          @include multi-ellipsis(2);
+        }
+        .info_tit {
+          margin-bottom: 12px;
+          font-size: 16px;
+          line-height: 1.63;
+          letter-spacing: normal;
+          @include multi-ellipsis(2);
+        }
+        .info_s {
+          margin-bottom: 16px;
+          color: #535353;
+          .icon {
+            display: inline-block;
+            margin-left: 10px;
+            height: 16px;
+            padding: 0 4px;
+            background-color: #e8e8ef;
+            font-size: 12px;
+            font-weight: 300;
+            line-height: 16px;
+            letter-spacing: normal;
+            text-align: center;
+            color: #595959;
+          }
+        }
+        .tag_list {
+          @include multi-ellipsis(1);
+          .tag_item {
+            float: left;
+            & + .tag_item {
+              margin-left: 8px;
+              font-size: 14px;
+              line-height: 1.43;
+              letter-spacing: normal;
+              color: #999;
+            }
+          }
+        }
+        .btn_like {
+          position: absolute;
+          right: 22px;
+          top: 32px;
+          width: 22px;
+          height: 20px;
+        }
+        //magazine
+        .top_tit {
+          margin-bottom: 18px;
+          font-size: 14px;
+          font-weight: 600;
+          line-height: 1.2;
+          letter-spacing: 2.8px;
+          color: $point;
+          text-align: center;
+        }
+        .thumb {
+          margin-bottom: 22px;
+        }
+        .desc {
+          font-size: 16px;
+          line-height: 1.63;
+          letter-spacing: normal;
+          color: #222;
+        }
+      }
+    }
+    .btn_more_bottom {
+      margin-top: auto;
+    }
+  }
+  .sec_mentoring,.sec_insight {
+    .swiper_wrap {
+      margin-top: 60px;
+      @include media-max($xl) {
+        margin-top: 30px;
+        
+        width: calc(100% + 40px);
+        margin-left: -20px;
+      }
+    }
+  }
+
+  //Mentoring
+  .sec_mentoring {
+    padding: 100px 0 162px;
+    @include media-max($xl) {
+      padding: 56px 0 130px;
+    }
+    .ballon {
+      &::before {
+        height: 166%;
+        top: -15px;
+        @include media-max($m) {
+          height: 178%;
+          top: -10px;
+        }
+      }
+    }
+  }
+  //Insight
+  .sec_insight {
+    padding: 125px 0 218px;
+    @include media-max($xl) {
+      padding: 56px 0 130px;
+    }
+    .ballon {
+      &::before {
+        height: 128%;
+        top: -7px;
+        left: -11px;
+        @include media-max($m) {
+          height: 137%;
+          top: -5px;
+        }
+      }
+    }
+    .icon_bg_blue {
+      position: absolute;
+      top: 20px;
+      left: 15px;
+      min-width: 60px;
+      height: 26px;
+      padding: 0 6px;
+      line-height: 26px;
+      border-radius: 13px;
+      background-color: $point;
+      color: $white;
+      text-align: center;
+      font-size: 14px;
+      font-weight: 800;
+      letter-spacing: 1.4px;
+      &.white {
+        background-color: $white;
+      }
+    } 
+  }
+  //Magazine
+  .sec_magazine {
+    .tit_wrap {
+      .sub_tit {
+        margin-top: 48px;
+        margin-bottom: 20px;
+        @include media-max($xl) {
+          margin-top: 24px;
+        }
+      }
+    }
+    .swiper_wrap {
+      margin-top: -30px;
+      @include media-max($xl) {
+        margin-top: 0;
+      }
+      .slide_box {
+        min-height: 410px;
+      }
+    }
+    .ballon {
+      &::before {
+        height: 162%;
+        top: -14px;
+        @include media-max($m) {
+          width: 115%;
+          left: -5px;
+          height: 160%;
+          top: -8px;
+        }
+      }
+    }
+  }
+  //Seminar
+  .sec_seminar {
+    padding: 125px 0 150px;
+    @include media-max($xl) {
+      padding: 62px 0 100px;
+    }
+    .ballon {
+      &::before {
+        top: -8px;
+        background-size: 240px 70px;
+        @include media-max($m) {
+          top: -6px;
+          background-size: 150px 42px;
+        }
+      }
+    }
+    .swiper_wrap {
+      margin-top: 60px;
+      @include media-max($m) {
+        margin-top: 30px;
+      }
+    }
+    .swiper-wrapper {
+      padding-bottom: 70px;
+      @include media-max($xl) {
+        padding-bottom: 60px;
+      }
+    }
+    .swiper-scrollbar {
+      width: calc(100% - 170px);
+      // @include media-max($xl) {
+      //   width: 74%;
+      // }
+      // @include media-max($m) {
+      //   width: 60%;
+      // }
+      .swiper-scrollbar-drag {
+        background: $point;
+      }
+    }
+    .com_card_item {
+      @include border-radius(20px);
+      border: solid 1px #ccc;
+      .thumb {
+        .thumb_img {
+          @include border-radius(20px 20px 0 0);
+          min-height: 166px;
+          @include media-max($m) {
+            min-height: 85px;
+          }
+        }
+      }
+      .info {
+        @include flex(x);
+        flex-direction: column;
+        padding: 25px 26px;
+        margin-top: 0;
+        .info_s {
+          margin-top: 8px;
+        }
+        .com_btn {
+          margin-top: 30px;
+          font-size: 18px;
+          font-weight: 600;
+        }
+      }
+    }
+  }
+  //Community
+  .sec_community {
+    padding: 125px 0 172px;
+    @include media-max($xl) {
+      padding: 62px 0 100px;
+    }
+    .ballon {
+      &::before {
+        width: 140%;
+        height: 150%;
+        left: -10px;
+        top: -10px;
+        background-size: 85px 70px;
+        @include media-max($m) {
+          left: -7px;
+          top: -7px;
+          background-size: 55px 46px;
+        }
+      }
+    }
+    .swiper_wrap {
+      margin-top: 54px;
+      @include media-max($xl) {
+        margin-top: 27px;
+        // width: calc(100% + 30px);
+      }
+      .swiper-slide {
+        &:nth-child(odd) {
+          .com_card_item {
+            background-color: #f4e8ff;
+          }
+        }
+        &:nth-child(even) {
+          .com_card_item {
+            background-color: #fef7e5;
+          }
+        }
+      }
+      .com_card_item {
+        position: relative;
+        @include border-radius(20px);
+        padding: 42px 42px;
+        @include media-max($m) {
+          padding: 20px 20px;
+        }
+        .tit {
+          max-width: 230px;
+        }
+        .info {
+          margin-top: 0;
+          .desc {
+            margin-top: 22px;
+            font-size: 14px;
+            line-height: 1.43;
+            @include media-max($m) {
+              margin-top: 10px;
+              font-size: 13px;
+            }
+          }
+          .info_s {
+            margin-top: 25px;
+            @include media-max($m) {
+              margin-top: 14px;
+            }
+          }
+        }
+        .icon_chat {
+          position: absolute;
+          top: 38px;
+          right: 30px;
+          width: 60px;
+          height: 60px;
+          @include media-max($m) {
+            top: 19px;
+            right: 15px;
+            width: 30px;
+            height: 30px;
+          }
+        }
+      }
+    }
+  }
+  //Managing
+  .sec_managing {
+    padding: 102px 0 116px;
+    background: $point;
+    @include media-max($m) {
+      padding: 62px 0 50px;
+    }
+    .tit_wrap {
+      &.center {
+        .tit {
+          margin-bottom: 64px;
+          color: $white;
+          @include media-max($m) {
+            margin-bottom: 32px;
+          }
+        }
+      }
+    }
+    .list {
+      @include flex(between);
+      @include flex-wrap(wrap);
+      margin-left: -30px;
+      @include media-max($m) {
+        @include flex(column);
+        margin-top: 32px;
+        margin-left: -10px;
+      }
+      .item {
+        flex: 1;
+        min-width: calc((100% / 3) - 30px);
+        margin-left: 30px;
+        align-self: stretch;
+        @include media-max($m) {
+          margin-left: 10px;
+          width: 100%;
+          margin-top: 10px;
+        }
+      }
+      .box {
+        position: relative;
+        background: $white;
+        padding: 50px 20px 0;
+        height: 100%;
+        text-align: center;
+        @include border-radius(20px);
+        @include flex(y);
+        flex-direction: column;
+        @include media-max($m) {
+          padding: 35px 0 0 10px;
+          @include flex(s);
+          flex-direction: row;
+        }
+        .tit {
+          font-size: 24px;
+          font-weight: bold;
+          line-height: 1.3;
+          letter-spacing: normal;
+          @include media-max($m) {
+            font-size: 15px;
+            margin-top: 10px;
+          }
+        }
+        .info {
+          margin-top: 0;
+          margin-bottom: 20px;
+          @include media-max($m) {
+            flex: 1;
+            margin-right: 10px;
+            font-size: 13px;
+          }
+        }
+        .info_txt {
+          @include multi-ellipsis(2);
+          margin-top: 20px;
+          font-size: 18px;
+          font-weight: 500;
+          line-height: 1.3;
+          letter-spacing: normal;
+          text-align: center;
+          color: #737373;
+          @include media-max($m) {
+            font-size: 16px;
+            margin-top: 10px;
+          }
+        }
+      }
+      .bg {
+        margin-top: auto;
+        @include media-max($m) {
+          margin-top: -10px;
+        }
+        .bg_img {
+          max-height: 160px;
+          width: 100%;
+        }
+      }
+    }
+  }
+  //swiper pagination
+  .custom_pagination {
+    @include flex(y);
+    position: absolute;
+    width: 100%;
+    bottom: -28px;
+    .com_swiper_bullet {
+      margin: 0 4px;
+      &.swiper-pagination-bullet-active {
+        background: #000;
+      }
+    }
+    .com_swiper_fraction {
+      margin: 0 4px;
+      font-size: 16px;
+      font-weight: 800;
+      line-height: 1.75;
+      letter-spacing: normal;
+      &.current {
+        color: #999;
+      }
+    }
+    &.visual {
+      @include flex(all);
+      .com_swiper_bullet {
+        margin: 0 8px;
+        &.swiper-pagination-bullet-active {
+          background: $point;
+        }
+      }
+    }
+    &.mentor, &.insight, &.seminar {
+      @include flex(all);
+      bottom: -80px;
+      .swiper-button-prev, .swiper-button-next {
+        position: relative;
+        margin-top: auto;
+        width: 38px;
+        height: 38px;
+        border-radius: 100%;
+        background: $white;
+        color: $point;
+        box-shadow: 0 0 20px 0 rgba(0, 53, 255, 0.3);
+        &::after {
+          font-size: 14px;
+          font-weight: bold;
+        }
+        &.swiper-button-disabled {
+          color: #999;
+          opacity: 1;
+          box-shadow: 0 0 20px 0 rgba(102, 102, 102, 0.2);
+        }
+      }
+      .swiper-button-prev {
+        left: auto;
+      }
+      .swiper-button-next {
+        right: auto;
+      }
+      .swiper_fraction {
+        width: auto;
+        min-width: 50px;
+        text-align: center;
+        margin: 0 18px;
+        @include media-max($xl) {
+          margin: 0 8px;
+        }
+      }
+    }
+    &.seminar {
+      @include flex(all);
+      justify-content: flex-end;
+      bottom: -12px;
+    }
+    &.match,&.magazine {
+      bottom: 0;
+      left: 130px;
+      @include media-max($xl) {
+        justify-content: center;
+        left: 0;
+      }
+    }
+    &.community {
+      @include flex(x);
+      bottom: -72px;
+      @include media-max($xl) {
+        bottom: -30px;
+      }
+    }
+  }
+  //진행중인 공고
+  .sec_job {
+    padding: 23px 0 100px;
+    @include media-max($xl) {
+      padding: 30px 0 100px;
+    }
+    .select_wrap {
+      @include media-max($m) {
+        width: 100%;
+        display: flex;
+        margin-top: 20px;
+      }
+      .select {
+        width: 180px;
+        @include media-max($m) {
+          width: 100%;
+          flex: 1;
+        }
+      }
+    }
+    .job_wrap {
+      .pg_tit_wrap {
+        @include flex(between);
+        margin-bottom: 42px;
+        @include media-max($xl) {
+          margin-bottom: 20px;
+        }
+        @include media-max($m) {
+          @include flex(column);
+          align-items: flex-start;
+        }
+      }
+      .list {
+        @include flex(y);
+        @include flex-wrap(wrap);
+        margin-left: -25px;
+        margin-top: -25px;
+        margin-bottom: 60px;
+        @include media-max($xl) {
+          margin-left: -20px;
+          margin-top: -20px;
+          margin-bottom: 30px;
+        }
+        .com_job_item {
+          width: calc((100% / 4) - 25px);
+          max-height: 230px;
+          margin-left: 25px;
+          margin-top: 25px;
+          @include media-max($xl) {
+            width: calc((100% / 2) - 20px);
+            margin-left: 20px;
+            margin-top: 20px;
+          }
+          @include media-max($m) {
+            width: 100%;
+          }
+        }
+      }
+    }
+  }
+}

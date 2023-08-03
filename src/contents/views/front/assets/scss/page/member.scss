@@ -1,0 +1,137 @@
+@import '../common/variables';
+//!로그인,회원가입 공통
+.com_member{
+  min-height: 100vh;
+  background: $bg;
+  padding-block:88px 100px;
+  @include media-max($m){
+    padding:30px $pd-inline 87px;
+  }
+  .logo{
+    width:148px;
+    margin:0 auto 19px;
+    @include media-max($m){
+      width:108px;
+      margin-bottom:23px;
+    }
+  }
+  .box{
+    width: 420px;
+    margin-inline:auto;
+    padding: 17px 30px 35.2px;
+    border-radius: 20px;
+    border: solid 1px #e4e5ed;
+    background-color: #fff; 
+    @include media-max($m){
+      width:100%;
+      max-width: 420px;
+      padding:20px $pd-inline 30px;
+    }   
+    .com_tab{
+      margin:-17px -30px 23px -30px;
+      width:calc(100% + 60px);
+      @include media-max($m){
+        margin-top:-20px;
+        margin-inline:calc(0px - $pd-inline);
+        width:calc(100% + ($pd-inline * 2))
+      }
+    }
+    .pg_tit{
+      font-size: 20px;
+      font-weight: 700;
+      line-height: 1.2;
+      letter-spacing: normal;
+      text-align: center;
+      color: $black;   
+      margin-bottom:10px;
+      padding-top:13px;
+      @include media-max($m){
+        font-size:18px;
+      }
+    }
+    .pg_txt{
+      font-size: 15px;
+      line-height: 1.2;
+      letter-spacing: normal;
+      text-align: center;
+      @include media-max($m){
+        font-size:14px;
+      }
+    }
+  }
+}
+
+//!로그인 login
+.p_login{
+  .com_btn{
+    width:100%;
+    margin-left:0;
+  }
+  .sec_input{
+    .input{
+      margin-bottom:10px;
+      width:100%;
+      margin-left:0;
+    }
+  }
+  .find_idpw{
+    margin-top:16px;
+    text-align: right;
+    @include media-max($m){
+      text-align: center;
+    }
+    .link{
+      &:not(:last-child){
+        @include divider(1px,12px, 16px);
+        &:after{
+          vertical-align: -2px;
+        }
+      }
+    }
+  }
+  .sns_login{
+    margin-top:35px;
+    text-align: center;
+    @include media-max($m){
+      margin-top:30px;
+    }
+    .tit{
+      font-size: 14px;
+      line-height: 1.43;
+      letter-spacing: normal;
+      color: #666;    
+      margin-bottom:14px;
+      width:100%;
+    }
+    .btn_wrap{
+      @include flex(all);
+      .btn{
+        margin-inline: 10px;
+        @include media-max($m){
+          margin-inline: 5px;
+        }
+        img{
+          width:50px;
+          min-width: 50px;
+          height: 50px;
+        }
+      }
+    }
+  }
+  .sec_join{
+    border-top:1px solid $c-border;
+    margin-top:27px;
+    padding-top:35px;
+    @include media-max($m){
+      margin-top:31px;
+      padding-top:25px;
+    }
+    .tit{
+      font-size: 14px;
+      line-height: 1.43;
+      letter-spacing: normal;
+      color: #666;   
+      margin-bottom:13px;
+    }
+  }
+}

@@ -1,0 +1,76 @@
+@import '../common/variables';
+
+.com_term{
+  background-color: $bg;
+  padding-bottom:113px;
+  @include media-max($m){
+    padding-bottom:50px;
+  }
+  .pg_tit{
+    font-size: 30px;
+    font-weight: 800;
+    line-height: 1.17;
+    letter-spacing: normal;
+    text-align: center; 
+    padding-block: 50px 25px;
+    color:$black;
+    @include media-max($m){
+      font-size:16px;
+      padding: 30px $pd-inline 16px;
+    }
+  }
+  .box{
+    padding: 30px 25px;
+    border-radius: 20px;
+    border: solid 1px #e4e5ed;
+    background-color: #fff;  
+    @include media-max($m){
+      padding:15px $pd-inline;
+      margin-inline: $pd-inline;
+    }
+  }
+  .sec_tit{
+    font-size: 18px;
+    font-weight: bold;
+    letter-spacing: normal;
+    text-align: left;  
+    margin-bottom:20px; 
+    @include media-max($m){
+      font-size:13px;
+      margin-bottom:10px;
+    }
+  }
+  .tit{
+    font-size: 15px;
+    font-weight: bold;
+    letter-spacing: -0.38px;   
+    color:$fc-default;
+    margin-bottom:15px;
+    @include media-max($m){
+      font-size:13px;
+      margin-bottom:8px;
+    }
+    &+.tit{
+      margin-top:20px;
+      @include media-max($m){
+        margin-top:10px
+      }
+    }
+  }
+  .txt{
+    &+.tit{
+      margin-top:20px;
+    }
+  }
+  .sec{
+    margin-bottom:20px;
+    font-size: 14px;
+    line-height: 1.43;
+    letter-spacing: normal;
+    text-align: left;
+    color: #666;  
+    @include media-max($m){
+      font-size:12px;
+    }
+  }
+}

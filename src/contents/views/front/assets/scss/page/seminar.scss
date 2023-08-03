@@ -1,0 +1,327 @@
+@import '../common/_variables.scss';
+
+.p_seminar {
+  //long banner
+  .sec_banner {
+    background: #323cec url('../../img/bg_banner.png') no-repeat center;
+    background-size: cover;
+    height: 180px;
+    @include media-max($xl) {
+      height: 260px;
+      background: #323cec url('../../img/bg_banner_m.png') no-repeat center;
+      background-size: contain;
+    }
+    @include media-max($m) {
+      height: 160px;
+    }
+  }
+  .sec_seminar {
+    background-color: $bg;
+    padding-top: 30px;
+    .com_center_wrap {
+      @include media-max($xl) {
+        padding-inline: $pd-inline;
+      }
+      .com_pg_tit {
+        font-size: clamp(20px, 3vw, 30px);
+        font-weight: 800;
+      }
+      .input_box {
+        @include flex(y);
+        padding-bottom: 28px;
+        max-width: 240px;
+        margin-left: auto;
+        @include media-max($s) {
+          max-width: 100%;
+          padding-bottom: 0;
+        }
+        &.icon_search {
+          &::after {
+            content: '';
+            display: inline-block;
+            width: 20px;
+            height: 20px;
+            background: url('../../img/icon_search.png') no-repeat 0 0;
+            background-size: contain;
+            margin-left: -32px;
+          }
+        }
+        .input {
+          border-radius: 5px;
+          padding: 0 40px 0 15px;
+        }
+      }
+      .list {
+        @include flex(_);
+        @include flex-wrap(wrap);
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(270px, 1fr));
+        gap: 40px;
+        @include media-max($m) {
+          margin: auto;
+          margin-top: 25px;
+        }
+        .com_card_item {
+          background-color: $white;
+          padding-bottom: 28px;
+          min-height: 410px;
+          border-radius: 20px;
+          margin-left: 0;
+          .thumb_img {
+            border-radius: 20px 20px 0 0;
+            height: 165px;
+            width: 100%;
+            object-fit: cover;
+          }
+          .info {
+            margin: 0;
+            padding-inline: 22px;
+            margin-bottom: 15px;
+            .title {
+              line-height: 1.2;
+              padding-block: clamp(15px, 3vw, 22px);
+              font-size: clamp(16px, 3vw, 20px);
+              font-weight: 600;
+            }
+            .detail {
+              @include flex(_);
+              gap: 5px;
+              font-size: 14px;
+              .text_grey {
+                color: #999;
+              }
+            }
+          }
+          .com_btn {
+            display: block;
+            margin: 0 auto;
+            padding: 0;
+            width: 210px;
+            height: 40px;
+            border-radius: 20px;
+            font-size: 18px;
+            font-weight: 600;
+          }
+          .disabled {
+            color: #999;
+            border: none;
+            background-color: $bg;
+          }
+        }
+      }
+      .swiper_wrap {
+        padding-bottom: 150px;
+        .list_wrap {
+          padding-bottom: 40px;
+        }
+      }
+    }
+  }
+}
+
+.com_detail {
+  .com_center_wrap {
+    padding-inline: 0;
+    @include media-max($xl) {
+      padding-inline: 20px;
+    }
+    @include media-max($xxs) {
+      padding-inline: 0;
+    }
+    .sec_detail {
+      max-width: 1200px;
+      width: 100%;
+      margin-inline: 0;
+      .content_wrap {
+        @include flex(x);
+        gap: 30px;
+        @include media-max($xl) {
+          @include flex(column);
+        }
+        .image_wrap, .title_wrap {
+          background-color: $white;
+          border: 1px solid #ccc;
+          border-radius: 5px;
+          padding: 30px;
+          width: 100%;
+          flex: 1;
+        }
+        .image_wrap {
+          @include flex(y);
+          @include media-max($s) {
+            @include flex(column);
+            padding: 20px;
+          }
+          gap: 20px;
+          .img {
+            height: 190px;
+            object-fit: cover;
+          }
+          .address_wrap {
+            @include flex(column);
+            gap: 16px;
+            .detail_wrap {
+              padding-left: 30px;
+              position: relative;
+              @include flex(column);
+              gap: 6px;
+              @include media-max($s) {
+                flex-direction: row;
+              }
+              &::before {
+                content: '';
+                position: absolute;
+                left: 0;
+                height: 20px;
+                width: 20px;
+              }
+              &.icon_calender::before {
+                background: url('../../img/icon_calendar.svg') no-repeat 0 0;
+                background-size: contain;
+              }
+              &.icon_location::before {
+                background: url('../../img/icon_location.png') no-repeat 0 0;
+                background-size: contain;
+              }
+              &.icon_multi_user::before {
+                background: url('../../img/icon_multi_user.png') no-repeat 0 0;
+                background-size: contain;
+              }
+              .title, .detail {
+                font-size: 14px;
+              }
+              .title {
+                color: #999;
+              }
+            }
+          }
+        }
+        .title_wrap {
+          padding: 26px 30px 20px;
+          @include media-max($s) {
+            padding: 20px;
+          }
+          .title {
+            font-size: 24px;
+            font-weight: bold;
+            margin-bottom: 10px;
+          }
+          .description {
+            font-size: 14px;
+            color: #666;
+            margin-bottom: 18px;
+          }
+          .hashtags {
+            padding-bottom: 25px;
+            margin-bottom: 20px;
+            border-bottom: 1px solid $c-border;
+          }
+          .wrapper {
+            @include flex(between);
+            @include media-max($s) {
+              @include flex(column);
+              align-items: flex-start;
+              gap: 15px;
+            }
+            .other_detail {
+              .desc {
+                font-size: 14px;
+                .text_blue {
+                  color: $point;
+                }
+                .divider {
+                  display: inline-block;
+                  margin: 0 10px;
+                  height: 11px;
+                  background-color: $c-border;
+                  width: 1px;
+                }
+                .bold {
+                  font-weight: 800;
+                }
+                .counter {
+                  margin: 0 8px;
+                  height: 20px;
+                  width: 20px;
+                  border: 1px solid #ccc;
+                  background-color: $c-border;
+                  font-size: 16px;
+                  border-radius: 50%;
+                }
+              }
+            }
+            .com_btn {
+              font-size: 20px;
+              font-weight: bold;
+              border-radius: 25px;
+              min-width: 130px;
+              @include media-max($s) {
+                border-radius: 5px;
+                width: 100%;
+              }
+            }
+          }
+        }
+      }
+      .seminar_description {
+        .btn_wrapper {
+          @include flex(x);
+          .com_btn {
+            min-width: 160px;
+            font-size: 18px;
+            font-weight: 500;
+            border-radius: 5px 5px 0 0;
+            padding: 16px 5px;
+            background-color: $white;
+            border: 1px solid $c-border;
+            border-bottom: 1px solid $fc-default;
+            &.active {
+              border: 1px solid $fc-default;
+              border-bottom: none;
+            }
+            @include media-max($s) {
+              width: 100%;
+            }
+            @include media-max($xxs) {
+              font-size: 14px;
+              min-width: 130px;
+            }
+          }
+          .space {
+            display: inline-block;
+            height: auto;
+            width: 100%;
+            border-bottom: 1px solid $fc-default;
+            @include media-max($s) {
+              width: 0;
+            }
+          }
+          
+        }
+        .description_wrap {
+          border-top: none;
+          border-radius: 0 0 5px 5px;
+          @include media-max($s) {
+            padding: 20px;
+          }
+          .desc {
+            margin-left: 7px;
+            &::before {
+              content: '';
+              display: inline-block;
+              height: 4px;
+              width: 4px;
+              margin: 0 7px 4px -10px;
+              background-color: $point;
+              border-radius: 50%;
+            }
+          }
+          .map {
+            height: 352px;
+            background-color: $bg;
+          }
+        }
+      }
+    }
+  }
+}

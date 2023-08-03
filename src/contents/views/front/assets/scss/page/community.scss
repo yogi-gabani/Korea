@@ -1,0 +1,279 @@
+@import '../common/variables';
+
+.p_community {
+  //long banner
+  .sec_banner {
+    background: #323cec url('../../img/bg_banner.png') no-repeat center;
+    background-size: cover;
+    height: 180px;
+    @include media-max($xl) {
+      height: 260px;
+      background: #323cec url('../../img/bg_banner_m.png') no-repeat center;
+      background-size: contain;
+    }
+    @include media-max($m) {
+      height: 160px;
+    }
+  }
+
+  .sec_community {
+    background: #f8f8f8;
+    padding: 30px 0;
+    .com_center_wrap {
+      @include media-max($xl) {
+        padding-inline: $pd-inline;
+      }
+      .com_sub_tit_wrap {
+        .pg_tit_wrap {
+          margin-bottom: 32px;
+        }
+      }
+      .swiper_wrap {
+        //swiper pagination
+        .custom_pagination {
+          @include flex(y);
+          gap: 15px;
+          width: 100%;
+          &.category {
+            @include flex(all);
+            .item_tit {
+              font-size: 18px;
+              font-weight: bold;
+              padding: 5px 5px;
+              text-align: center;
+              display: block;
+              cursor: pointer;
+            }
+            .active {
+              color: $point;
+              border-bottom: 2px solid $point;
+            }
+            .swiper-button-prev, .swiper-button-next {
+              left: 0;
+              right: 0;
+              position: relative;
+              margin-top: auto;
+              min-width: 38px;
+              height: 38px;
+              border-radius: 100%;
+              background: $white;
+              color: $point;
+              box-shadow: 0 0 20px 0 rgba(0, 53, 255, 0.3);
+              &::after {
+                font-size: 14px;
+                font-weight: bold;
+              }
+              &.swiper-button-disabled {
+                color: #999;
+                opacity: 1;
+                box-shadow: 0 0 20px 0 rgba(102, 102, 102, 0.2);
+              }
+            }
+          }
+        }
+      }
+      .career {
+        @include flex(all);
+        margin-top: 37px;
+        min-height: 100px;
+        border: 1px solid $c-border;
+        border-radius: 20px;
+        padding: 30px;
+        @include media-max($m) {
+          flex-direction: column;
+          gap: 10px;
+          border-bottom:1px solid #f2f1f1;
+          padding: 20px;
+          border-radius: 5px;
+          & div.input_box {
+            margin: 0;
+            width: 100%;
+          }
+        }
+        .input_box {
+          width: 490px;
+          margin-left: auto;
+          margin-right: 10px;
+          @include flex(y);
+          &.icon_search {
+            &::after {
+              content: '';
+              display: inline-block;
+              width: 20px;
+              height: 20px;
+              background: url('../../img/icon_search.png') no-repeat 0 0;
+              background-size: contain;
+              margin-left: -35px;
+            }
+          }
+          .input {
+            border-radius: 5px;
+            padding: 0 40px 0 15px;
+          }
+        }
+        .com_btn {
+          background-color: $point;
+          border-radius: 40px;
+          color: $white;
+          font-size: 14px;
+          padding: 12px 20px;
+        }
+        .icon_pencil {
+          position: relative;
+          width: 300px;
+          padding-right: 45px;
+          @include media-max($m) {
+            width: 100%;
+          }
+          &::after {
+            content: '';
+            display: inline-block;
+            width: 30px;
+            height: 30px;
+            background: url('../../img/icon_pencil.png') no-repeat 0 0;
+            background-size: contain;
+            position: absolute;
+            top: 8px;
+            right: 16px;
+          }
+        }
+        .btn_category {
+          min-width: 100px;
+          padding: 12px 25px;
+          @include media-max($m) {
+            min-width: 100%;
+          }
+        }
+      }
+      .community_list {
+        margin: 23px 0 40px;
+        border-radius: 20px;
+        background-color: $white;
+        border: 1px solid #dfdfdf;
+        @include media-max($s) {
+          border-radius: 5px;
+        }
+      }
+      .com_paging {
+        padding-bottom: 140px;
+      }
+    }
+  }
+}
+
+// Community Write component
+.p_community_write {
+  .sec_form {
+    .form {
+      .com_input_sec .input_field {
+        .select {
+          .item {
+            &.active {
+              color: $point;
+              background-color: $white;
+              border: 1px solid $point;
+            }
+            cursor: pointer;
+          }
+        }
+        .detail {
+          height: 313px;
+          @include media-max($s) {
+            min-height: 100px;
+            height: 100px;
+          }
+        }
+        .thumbnail_wrap {
+          @include flex(y);
+          flex-wrap: wrap;
+          gap: 15px;
+          padding: 20px;
+          border-radius: 5px;
+          border: 1px solid $c-border;
+          @include media-max($s) {
+            gap: 10px;
+            padding: 15px;
+          }
+          .thumbnail {
+            object-fit: cover;
+            height: 120px;
+            @include media-max($s) {
+              height: 87px;
+            }
+          }
+          .addNew {
+            width: 163px;
+            @include flex(all);
+            border-radius: 5px;
+            border: 1px solid $c-border;
+            .plus {
+              font-size: 75px;
+              font-weight: 100;
+            }
+            @include media-max($s) {
+              width: 120px;
+              .plus {
+                font-size: 50px;
+              }
+            }
+          }
+        }
+      }
+      .com_btn_wrap {
+        margin-top: 30px;
+      }
+    }
+  }
+}
+
+
+
+// Modal component
+.p_modal {
+  &.modal_category .com_popup, &.modal_category_make {
+    .box {
+      padding: 0;
+      .list {
+        @include flex(y);
+        @include flex-wrap(wrap);
+        gap: 10px;
+        .item {
+          font-weight: normal;
+          margin-top: 0;
+          &.active {
+            font-weight: bold;
+            border: 2px solid $point;
+            background-color: $white;
+            color: $point;
+          }
+        }
+      }
+    }
+    .rule_list {
+      @include flex(column);
+      gap: 15px;
+      margin-top: 20px;
+      .rule {
+        @include flex(_);
+        font-size: 15px;
+        &::before {
+          content: 'ㆍ';
+          color: $point;
+          margin-top: -6px;
+          font-size: 25px;
+        }
+      }
+    }
+  }
+  &.modal_category_make {
+    .info_wrap .com_input_sec {
+      border-bottom: 1px solid $c-border;
+      .tit_field {
+        margin-block: 0 10px;
+      }
+      .input_field {
+        margin-bottom: 20px;
+      }
+    }
+  }
+}
